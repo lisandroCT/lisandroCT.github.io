@@ -9,19 +9,9 @@
  * Most of these are inherited from Base, but I want to change a few.
  */
 body {
-    line-height: 1.7em;
-    color: #7f8c8d;
+    line-height:normal;
+    color: #292C37;
     font-size: 13px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-label {
-    color: #34495e;
 }
 
 .pure-img-responsive {
@@ -153,10 +143,6 @@ a.pure-button-primary {
     color: #9f111b;
 }
 
-.pure-menu-selected .pure-menu-link, .pure-menu-selected .pure-menu-link:visited {
-    color: #9f111b;
-}
-
 .home-menu a {
     color: #cccccc;
 }
@@ -243,13 +229,22 @@ a.pure-button-primary {
 }
 
 .frame {
-    box-shadow: 0 1px 4px rgba(0,0,0,0.4);
-    background: #f2f2f2;
-    color: #292C37;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    background: #292C37;
+    color: #f2f2f2;
     padding: 0.3em;
     width: fit-content;
     position: relative;
     margin: auto;
+}
+
+.frame h2 {
+    font-size: 110%;
+    margin: 0;
+    padding: 0.3em;
+    position: absolute;
+    top: 1em;
+    background: #292C37cc;
 }
 
 .frame p {
