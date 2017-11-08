@@ -34,6 +34,17 @@ html, button, input, select, textarea,
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
+html a, button a, input a, select a, textarea a,
+.pure-g [class *= "pure-u"] a {
+    color: #9f111b;
+    text-decoration: none;
+}
+
+html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
+.pure-g [class *= "pure-u"] a:hover {
+    color: #b11623;
+}
+
 /*
  * -- LAYOUT STYLES --
  * These are some useful classes which I will need
@@ -102,7 +113,7 @@ a.pure-button-primary {
     height: 70px;
 }
 .home-menu {
-    background: #1a1a1a;
+    background: #292C37;
 }
 .pure-menu.pure-menu-fixed {
     /* Fixed menus normally have a border at the bottom. */
@@ -113,7 +124,7 @@ a.pure-button-primary {
 
 .home-menu .pure-menu-heading {
     text-transform: none;
-    color: #f2f2f2;
+    color: #cccccc;
     font-size: 150%;
     font-family: Cinzel, serif;
     font-weight: normal;
@@ -126,7 +137,7 @@ a.pure-button-primary {
 }
 
 .home-menu .pure-menu-heading span {
-    color: #aa0000;
+    color: #9f111b;
     font-weight: bold;
 }
 
@@ -139,21 +150,21 @@ a.pure-button-primary {
 }
 
 .home-menu .pure-menu-selected a {
-    color: #aa0000;
+    color: #9f111b;
 }
 
 .pure-menu-selected .pure-menu-link, .pure-menu-selected .pure-menu-link:visited {
-    color: #aa0000;
+    color: #9f111b;
 }
 
 .home-menu a {
-    color: #f2f2f2;
+    color: #cccccc;
 }
 .home-menu li a:hover,
 .home-menu li a:focus {
     background: none;
     border: none;
-    color: #AECFE5;
+    color: #b11623;
 }
 
 
@@ -163,7 +174,7 @@ a.pure-button-primary {
  */
 
 .splash-container {
-    background: #1a1a1a;
+    background: #292C37;
     z-index: 1;
     overflow: hidden;
     /* The following styles are required for the "scroll-over" effect */
@@ -173,7 +184,7 @@ a.pure-button-primary {
     left: 0;
     position: fixed !important;
     
-    color: #f2f2f2;
+    color: #cccccc;
 }
 
 .splash {
@@ -217,24 +228,24 @@ a.pure-button-primary {
 .portfolio h1 {
     font-weight: 400;
     font-family: Cinzel, serif;
-    color: #aa0000;
+    color: #9f111b;
 }
 
 .projects {
-    background: #f2f2f2;
+    background: #cccccc;
     padding: 1em 1em 3em;
 }
 
 .projects h1 {
     font-weight: 400;
     font-family: Cinzel, serif;
-    color: #aa0000;
+    color: #9f111b;
 }
 
 .frame {
     box-shadow: 0 1px 4px rgba(0,0,0,0.4);
     background: #f2f2f2;
-    color: #1a1a1a;
+    color: #292C37;
     padding: 0.3em;
     width: fit-content;
     position: relative;
@@ -270,7 +281,6 @@ a.pure-button-primary {
  * of the mobile styles.
  */
 @media (min-width: 48em) {
-
     /* We increase the body font size */
     body {
         font-size: 16px;
@@ -307,4 +317,32 @@ a.pure-button-primary {
         border: none;
     }
 
+}
+
+@media (max-width: 35.5em) {
+    .hidden-sm {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 48em) {
+    .hidden-md {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 64em) {
+    .hidden-lg {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 80em) {
+    .hidden-xl {
+        display: none;
+        visibility: hidden;
+    }
 }
