@@ -1,396 +1,288 @@
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Independent game programmer from Argentina.">
+    <title>Lisandro Crespo</title>
 
-/*
- * -- BASE STYLES --
- * Most of these are inherited from Base, but I want to change a few.
- */
-body {
-    line-height:normal;
-    color: #292C37;
-    font-size: 13px;
-}
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-min.css">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-min.css">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <!--<![endif]-->
 
-.pure-img-responsive {
-    max-width: 100%;
-    height: auto;
-}
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700|Roboto:300,400,500,700" rel="stylesheet">
 
-html, button, input, select, textarea,
-.pure-g [class *= "pure-u"] {
-    font-family: 'Roboto', sans-serif;
-}
-
-html a, button a, input a, select a, textarea a,
-.pure-g [class *= "pure-u"] a {
-    color: #9f111b;
-    text-decoration: none;
-}
-
-html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
-.pure-g [class *= "pure-u"] a:hover {
-    color: #b11623;
-}
-
-/*
- * -- LAYOUT STYLES --
- * These are some useful classes which I will need
- */
-.l-box {
-    padding: 1em;
-}
-
-.l-box-lrg {
-    padding: 2em;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-}
-
-.is-center {
-    text-align: center;
-}
-
-/*
- * -- MENU STYLES --
- */
-
-.header {
-    padding: 0.5em;
-    text-align: center;
-    background: #292C37;
-    color: #cccccc;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    border-bottom: none;
-    z-index: 5;
-}
-
-.header .logo {
-    text-transform: none;
-    color: #cccccc;
-    font-size: 150%;
-    font-family: 'Dosis', sans-serif;
-    font-weight: normal;
+    <link rel="stylesheet" href="css/styles.css">
+</head>
     
-    /*
-    position: relative;
-    padding-top: 0;
-    padding-bottom: 0;
-    transform: translateY(-50%);
-    top: 50%;
-    */
-}
+<body>
+<div class="header">
+    <i class="fa fa-bars bars" aria-hidden="true" onclick="openNav()"></i>
+    <nav>
+        <a class="logo" href="#"><span>L</span>isandro <span>C</span>respo</a>
 
-.header .logo span {
-    color: #9f111b;
-    font-weight: 700;
-}
+        <div class="navigation">
+            <a href="#portfolio">Portfolio</a>
+            <a href="#projects">Projects</a>
+            <a href="">Blog</a>
+            <a href="">Hire Me</a>
+        </div>
+    </nav>
+</div>
 
-.header .bars {
-    position: absolute;
-    left: 1em;
-    transform: translateY(-50%);
-    top: 50%;
-    font-size: 135%;
-}
-
-.header .navigation {
-    position: absolute;
-    transform: translateY(-50%);
-    top: 50%;
-    right: 0;
-    display: none;
-    visibility: hidden;
-    font-weight: 700;
-}
-
-.header .navigation a {
-    color: #cccccc;
-    margin-right: 1em;
-}
-
-.header .navigation a:hover {
-    color: #b11623;
-    margin-right: 1em;
-}
-
-.header .navigation a.is-selected  {
-    color: #b11623;
-}
-
-.side-navigation {
-    position: fixed;
-    z-index: 15;
-    height: 100%;
-    width: 10em;
-    top: 0;
-    left: -10em;
-    padding-top: 0.5em;
-    background: #292C37;
-    font-weight: 700;
-    font-size: 120%;
-    overflow-x: hidden;
-    transition: 0.5s;
-}
-
-.side-navigation a {
-    display: block;
-    color: #cccccc;
-    width: 100%;
-    margin-left: 1em;
-}
-
-.side-navigation a.is-selected  {
-    color: #b11623;
-}
-
-.shadow {
-    position: fixed;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    display: none;
-    visibility: hidden;
-}
-
-/*
-.home-menu ul {
-    position: relative;
-    padding-top: 0;
-    padding-bottom: 0;
-    transform: translateY(-50%);
-    top: 50%;
-}
-
-.home-menu .pure-menu-selected a {
-    color: #9f111b;
-}
-
-.home-menu a {
-    color: #cccccc;
-}
-.home-menu li a:hover,
-.home-menu li a:focus {
-    background: none;
-    border: none;
-    color: #b11623;
-}
-*/
-
-/*
- * -- SPLASH STYLES --
- * This is the blue top section that appears on the page.
- */
-
-.splash-container {
-    background: #292C37;
-    z-index: 1;
-    overflow: hidden;
-    /* The following styles are required for the "scroll-over" effect */
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: fixed !important;
+<nav>
+    <div class="nav side-navigation" id="navbar">
+        <a href="#portfolio" onclick="closeNav()">Portfolio</a>
+        <a href="#projects" onclick="closeNav()">Projects</a>
+        <a href="" onclick="closeNav()">Blog</a>
+        <a href="" onclick="closeNav()">Hire Me</a>
+    </div>
+</nav>
     
-    color: #cccccc;
-}
+<div class="shadow" id="shadow" onclick="closeNav()"></div>
 
-.splash {
-    text-align: center;
-    margin: auto;
-    margin-top: 4em;
-    width: 90%;
-    height: 100%;
-    font-size: 150%;
-}
+<section>
+    <div class="splash-container">
+        <div class="splash">
+            <img class="profile-picture" src="img/profile-1.jpg">
+            <div class="presentation">
+                <p>
+                    Hey, I’m an independent game programmer from Rosario, Argentina. I <i class="fa fa-heart" aria-hidden="true" style="color: #9f111b"></i> graphics technologies, rendering and game engines. I'm crazy about software architecture and clean code.
+                </p>
+                <p>
+                    Have a look at my <a href="#portfolio">portfolio</a>, some of my <a href="#projects">projects</a> and <a href="">blog posts</a>. If you need help with an upcoming project, then consider <a href="">hiring me</a>.
+                </p>
+            </div>     
+            <div class="social">
+                <a href=""><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-skype" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
 
-.splash a {
-	font-weight: 500;
-}
+<div class="content-wrapper">
+    <section>
+        <div class="portfolio" id="portfolio">
+            <h1 class="is-center">Portfolio</h1>
 
-.profile-picture {
-    display: none;
-    visibility: hidden;
-}
-
-.presentation {
-    text-align: center;
-    height: 70%;
-    overflow: hidden;
-}
-
-.social {
-    letter-spacing: 0.5em;
-    font-size: 130%;
-    height: 30%;
-    text-align: center;
-}
-
-.social a{
-    color: #cccccc;
-}
-
-/*
- * -- CONTENT STYLES --
- * This represents the content area (everything below the blue section)
- */
-.content-wrapper {
-    /* These styles are required for the "scroll-over" effect */
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    min-height: 12%;
-    z-index: 2;
-    background: white;
-
-}
-
-.portfolio {
-    background: #e6e6e6;
-    padding: 1em 1em 3em;
-}
-
-.portfolio h1 {
-    font-weight: 700;
-    font-family: 'Dosis', sans-serif;
-    color: #9f111b;
-    margin-top: 1.5em;
-}
-
-.projects {
-    background: #cccccc;
-    padding: 1em 1em 3em;
-}
-
-.projects h1 {
-    font-weight: 700;
-    font-family: 'Dosis', sans-serif;
-    color: #9f111b;
-    margin-top: 1.5em;
-}
-
-.frame {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.6);
-    background: #292C37;
-    color: #f2f2f2;
-    padding: 0.3em;
-    width: fit-content;
-    position: relative;
-    margin: auto;
-}
-
-.frame h2 {
-    font-size: 110%;
-    margin: 0;
-    padding: 0.3em;
-    position: absolute;
-    top: 1.5em;
-    background: rgba(41, 44, 55, 0.8);
-}
-
-.frame p {
-    margin: 0;
-    font-weight: 300;
-}
-
-/*
- * -- TABLET (AND UP) MEDIA QUERIES --
- * On tablets and other medium-sized devices, we want to customize some
- * of the mobile styles.
- */
-@media (min-width: 48em) {
-    /* We increase the body font size */
-    body {
-        font-size: 16px;
-    }
-
-    /* We can align the menu header to the left, but float the
-    menu items to the right. */
-    .header {
-        padding-left: 2em;
-        text-align: left;
-    }
-
-    /* We decrease the width of the .splash, since we have more width
-    to work with */
-    .splash {
-        width: 70%;
-        max-width: 45em;
-        margin-top: 3em;
-    }
-
-    /* We remove the border-separator assigned to .l-box-lrg */
-    .l-box-lrg {
-        border: none;
-    }
-}
-
-@media (min-width: 35.5em) {
-    .profile-picture {
-        display: inline;
-        visibility: visible;
-        border-radius: 50%;
-        height: 30%;
-        width: auto;
-    }
-
-    .presentation {
-        height: 40%;
-    }
+            <div class="pure-g">
+                <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
+                    <div class="frame">
+                        <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
+                        <h2>
+                            Sweet Meat
+                        </h2>
+                        <p>
+                            Free-to-Play endless runner with an innovative tweak: Twitter users can play God by sending threats to all active players in real-time.
+                        </p>
+                    </div>
+                </div>
+                <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
+                    <div class="frame">
+                        <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
+                        <h2>
+                            Fanta
+                        </h2>
+                        <p>
+                            Free-to-Play endless runner with an innovative tweak: Twitter users can play God by sending threats to all active players in real-time.
+                        </p>
+                    </div>
+                </div>
+                <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
+                    <div class="frame">
+                        <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
+                        <h2>
+                            Powerade
+                        </h2>
+                        <p>
+                            Free-to-Play endless runner with an innovative tweak: Twitter users can play God by sending threats to all active players in real-time.
+                        </p>
+                    </div>
+                </div>
+                <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
+                    <div class="frame">
+                        <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
+                        <h2>
+                            Max Steel
+                        </h2>
+                        <p>
+                            Free-to-Play endless runner with an innovative tweak: Twitter users can play God by sending threats to all active players in real-time.
+                        </p>
+                    </div>
+                </div>
+                <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
+                    <div class="frame">
+                        <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
+                        <h2>
+                            Barbie
+                        </h2>
+                        <p>
+                            Free-to-Play endless runner with an innovative tweak: Twitter users can play God by sending threats to all active players in real-time.
+                        </p>
+                    </div>
+                </div>
+                <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
+                    <div class="frame">
+                        <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
+                        <h2>
+                            Blossom
+                        </h2>
+                        <p>
+                            Free-to-Play endless runner with an innovative tweak: Twitter users can play God by sending threats to all active players in real-time.
+                        </p>
+                    </div>
+                </div>
+                <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
+                    <div class="frame">
+                        <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
+                        <h2>
+                            Trivias and minigames
+                        </h2>
+                        <p>
+                            Free-to-Play endless runner with an innovative tweak: Twitter users can play God by sending threats to all active players in real-time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
-    .social {
-        font-size: 180%;
-    }
-}
+    <section>
+        <div class="projects" id="projects">
+            <h1 class="is-center">Projects</h1>
 
-@media (min-width: 35.5em) {
-    .hidden-sm {
-        display: none;
-        visibility: hidden;
-    }
-}
+            <div class="pure-g">
+                <div class="l-box pure-u-1 pure-u-lg-1-2">
+                    <div class="frame">
+                        <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
+                        <h2>
+                            Virtual Machine
+                        </h2>
+                        <p>
+                            Virtual Machine written in C#.
+                        </p>
+                        <p>
+                            Not yet publicly available.
+                        </p>
+                    </div>
+                </div>
+                <div class="l-box pure-u-1 pure-u-lg-1-2">
+                    <div class="frame">
+                        <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
+                        <h2>
+                            KMath
+                        </h2>
+                        <p>
+                            Math library written in Kotlin.
+                        </p>
+                        <p>
+                            Not yet publicly available.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 
-@media (min-width: 48em) {
-    .hidden-md {
-        display: none;
-        visibility: hidden;
-    }
-    
-    .header .logo {
-        width: 100%;
-    }
-    
-    .header .bars {
-        display: none;
-        visibility: hidden;
-    }
-    
-    .side-navigation {        
-        display: none;
-        visibility: hidden;
-    }
-    
-    .header .navigation {
-        display: inline;
-        visibility: visible;
-    }
-}
+<script>
+    (function() {
+        'use strict';
 
-@media (min-width: 64em) {
-    .hidden-lg {
-        display: none;
-        visibility: hidden;
-    }
-}
+        var windowHeight = calculateHeight();
+        
+        var sections = document.querySelectorAll('section [id]');
+        var navLinks = document.querySelectorAll('nav div a[href^="#"]');
 
-@media (min-width: 80em) {
-    .hidden-xl {
-        display: none;
-        visibility: hidden;
+        function getClosestSection() {
+            var sectionsLength = sections.length;
+
+            var closestIndex = -1;
+            var closestDistance = 0;
+            for(var index = 0; index < sectionsLength; index++) {
+                var distance = getDistance(sections.item(index));
+                
+                if(distance > 0.4) {
+                    continue;
+                }
+
+                if(closestIndex == -1 || Math.abs(distance) < Math.abs(closestDistance)) {
+                    closestIndex = index;
+                    closestDistance = distance;
+                }
+            }
+            
+            Array.prototype.forEach.call(navLinks, function(element){
+                element.classList.remove('is-selected');
+            });
+
+            if(closestIndex == -1) {
+                return;
+            }
+            
+            selectLink(sections.item(closestIndex).id)
+        }
+
+        function getDistance(element) {
+            var position = element.getBoundingClientRect();
+            return position.top / windowHeight;
+        }
+
+        function selectLink(id) {            
+            Array.prototype.forEach.call(navLinks, function(element){
+                if(element.href.split("#")[1] == id) {
+                    element.classList.add('is-selected');
+                }
+            });
+        }
+        
+        function calculateHeight() {
+            var w = window,
+                d = document,
+                e = d.documentElement,
+                g = d.getElementsByTagName('body')[0],
+                y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+            
+            return y;
+        }
+        
+        window.onresize = function(event) {
+            windowHeight = calculateHeight();
+        };
+        
+        window.onscroll = function(event) {
+            getClosestSection();
+        };
+    })();
+</script>
+<script>
+    var navbar = document.getElementById("navbar");
+    var shadow = document.getElementById("shadow");
+    
+    function openNav() {
+        navbar.style.left = "0";
+        shadow.style.display = "inline";
+        shadow.style.visibility = "visible";
     }
-}
+
+    function closeNav() {
+        navbar.style.left = "-10em";
+        shadow.style.display = "none";
+        shadow.style.visibility = "hidden";
+    }
+</script>
+</body>
+</html>
