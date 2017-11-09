@@ -12,6 +12,7 @@ body {
     line-height:normal;
     color: #292C37;
     font-size: 13px;
+    background: #292C37; 
 }
 
 .pure-img-responsive {
