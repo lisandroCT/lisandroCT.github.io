@@ -174,21 +174,34 @@ a.pure-button-primary {
 }
 
 .splash {
-    /* absolute center .splash within .splash-container */
-    position: absolute;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    top: 100px;
-    left: 0;
-    right: 0;
+    margin: auto;
+    margin-top: 4em;
     width: 90%;
     height: 100%;
     font-size: 150%;
 }
 
-.img-circle {
-    border-radius: 50%;
+.profile-picture {
+    display: none;
+    visibility: hidden;
+}
+
+.presentation {
+    text-align: center;
+    height: 70%;
+    overflow: hidden;
+}
+
+.social {
+    letter-spacing: 0.5em;
+    font-size: 130%;
+    height: 30%;
+    text-align: center;
+}
+
+.social a{
+    color: #cccccc;
 }
 
 /*
@@ -275,14 +288,33 @@ a.pure-button-primary {
     /* We decrease the width of the .splash, since we have more width
     to work with */
     .splash {
-        width: 65%;
+        width: 70%;
+        max-width: 45em;
+        margin-top: 3em;
     }
 
     /* We remove the border-separator assigned to .l-box-lrg */
     .l-box-lrg {
         border: none;
     }
+}
 
+@media (min-width: 35.5em) {
+    .profile-picture {
+        display: inline;
+        visibility: visible;
+        border-radius: 50%;
+        height: 30%;
+        width: auto;
+    }
+
+    .presentation {
+        height: 40%;
+    }
+    
+    .social {
+        font-size: 180%;
+    }
 }
 
 @media (max-width: 35.5em) {
