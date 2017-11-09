@@ -86,7 +86,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 
 .header .logo span {
     color: #9f111b;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .header .bars {
@@ -104,7 +104,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     right: 0;
     display: none;
     visibility: hidden;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .header .navigation a {
@@ -130,7 +130,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     left: -10em;
     padding-top: 0.5em;
     background: #292C37;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 120%;
     overflow-x: hidden;
     transition: 0.5s;
@@ -209,6 +209,10 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     font-size: 150%;
 }
 
+.splash a {
+	font-weight: 500;
+}
+
 .profile-picture {
     display: none;
     visibility: hidden;
@@ -252,7 +256,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 }
 
 .portfolio h1 {
-    font-weight: 400;
+    font-weight: 700;
     font-family: 'Dosis', sans-serif;
     color: #9f111b;
     margin-top: 1.5em;
@@ -264,7 +268,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 }
 
 .projects h1 {
-    font-weight: 400;
+    font-weight: 700;
     font-family: 'Dosis', sans-serif;
     color: #9f111b;
     margin-top: 1.5em;
@@ -291,6 +295,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 
 .frame p {
     margin: 0;
+    font-weight: 300;
 }
 
 /*
