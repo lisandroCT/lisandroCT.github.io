@@ -26,23 +26,21 @@
 <body>
 <div class="header">
     <i class="fa fa-bars bars" aria-hidden="true" onclick="openNav()"></i>
-    <a class="logo" href=""><span>L</span>isandro <span>C</span>respo</a>
+    <a class="logo" href="#"><span>L</span>isandro <span>C</span>respo</a>
 
-    <!--
-    <ul class="pure-menu-list">
-        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Portfolio</a></li>
-        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Projects</a></li>
-        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Blog</a></li>
-        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Hire Me</a></li>
-    </ul>
-    -->
+    <div class="navigation">
+        <a href="#portfolio">Portfolio</a>
+        <a href="#projects">Projects</a>
+        <a href="#">Blog</a>
+        <a href="#">Hire Me</a>
+    </div>
 </div>
     
-<div class="navigation" id="navbar">
-    <a href="#">Portfolio</a>
-    <a href="#">Projects</a>
-    <a href="#">Blog</a>
-    <a href="#">Hire Me</a>
+<div class="side-navigation" id="navbar">
+    <a href="#portfolio" onclick="closeNav()">Portfolio</a>
+    <a href="#projects" onclick="closeNav()">Projects</a>
+    <a href="#" onclick="closeNav()">Blog</a>
+    <a href="#" onclick="closeNav()">Hire Me</a>
 </div>
     
 <div class="shadow" id="shadow" onclick="closeNav()"></div>
@@ -55,7 +53,7 @@
                 Hey, I’m an independent game programmer from Rosario, Argentina. I <i class="fa fa-heart" aria-hidden="true" style="color: #9f111b"></i> graphics technologies, rendering and game engines. I'm crazy about software architecture and clean code.
             </p>
             <p>
-                Have a look at my <a href="">portfolio</a>, some of my <a href="">projects</a> and <a href="">blog posts</a>. If you need help with an upcoming project, then consider <a href="">hiring me</a>.
+                Have a look at my <a href="#portfolio">portfolio</a>, some of my <a href="#projects">projects</a> and <a href="">blog posts</a>. If you need help with an upcoming project, then consider <a href="">hiring me</a>.
             </p>
         </div>     
         <div class="social">
@@ -70,7 +68,7 @@
 </div>
 
 <div class="content-wrapper">
-    <div class="portfolio">
+    <div class="portfolio" id="portfolio">
         <h1 class="is-center">Portfolio</h1>
 
         <div class="pure-g">
@@ -154,7 +152,7 @@
         </div>
     </div>
 
-    <div class="projects">
+    <div class="projects" id="projects">
         <h1 class="is-center">Projects</h1>
 
         <div class="pure-g">
@@ -194,14 +192,12 @@
     var navbar = document.getElementById("navbar");
     var shadow = document.getElementById("shadow");
     
-    /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
     function openNav() {
         navbar.style.left = "0";
         shadow.style.display = "inline";
         shadow.style.visibility = "visible";
     }
 
-    /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
     function closeNav() {
         navbar.style.left = "-10em";
         shadow.style.display = "none";
