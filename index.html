@@ -10,13 +10,11 @@
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-min.css">
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
-        <link rel="stylesheet" href="	https://unpkg.com/purecss@1.0.0/build/menus-min.css">
     <![endif]-->
     <!--[if gt IE 8]><!-->
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-min.css">
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
-        <link rel="stylesheet" href="	https://unpkg.com/purecss@1.0.0/build/menus-min.css">
     <!--<![endif]-->
 
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
@@ -27,17 +25,27 @@
     
 <body>
 <div class="header">
-    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-        <a class="pure-menu-heading" href=""><span>L</span>isandro <span>C</span>respo</a>
+    <i class="fa fa-bars bars" aria-hidden="true" onclick="openNav()"></i>
+    <a class="logo" href=""><span>L</span>isandro <span>C</span>respo</a>
 
-        <ul class="pure-menu-list hidden-md">
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Portfolio</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Projects</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Blog</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Hire Me</a></li>
-        </ul>
-    </div>
+    <!--
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Portfolio</a></li>
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Projects</a></li>
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Blog</a></li>
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Hire Me</a></li>
+    </ul>
+    -->
 </div>
+    
+<div class="navigation" id="navbar">
+    <a href="#">Portfolio</a>
+    <a href="#">Projects</a>
+    <a href="#">Blog</a>
+    <a href="#">Hire Me</a>
+</div>
+    
+<div class="shadow" id="shadow" onclick="closeNav()"></div>
 
 <div class="splash-container">
     <div class="splash">
@@ -181,5 +189,27 @@
         </div>
     </div>
 </div>
+    
+<script>
+    var navbar = document.getElementById("navbar");
+    var shadow = document.getElementById("shadow");
+    var width = navbar.offsetWidth;
+    
+    closeNav();
+    
+    /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+    function openNav() {
+        navbar.style.width = width + "px";
+        shadow.style.display = "inline";
+        shadow.style.visibility = "visible";
+    }
+
+    /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+    function closeNav() {
+        navbar.style.width = "0px";
+        shadow.style.display = "none";
+        shadow.style.visibility = "hidden";
+    }
+</script>
 </body>
 </html>

@@ -52,85 +52,82 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     text-align: center;
 }
 
-
-
-/*
- * -- PURE FORM STYLES --
- * Style the form inputs and labels
- */
-.pure-form label {
-    margin: 1em 0 0;
-    font-weight: bold;
-    font-size: 100%;
-}
-
-.pure-form input[type] {
-    border: 2px solid #ddd;
-    box-shadow: none;
-    font-size: 100%;
-    width: 100%;
-    margin-bottom: 1em;
-}
-
-/*
- * -- PURE BUTTON STYLES --
- * I want my pure-button elements to look a little different
- */
-.pure-button {
-    background-color: #1f8dd6;
-    color: white;
-    padding: 0.5em 2em;
-    border-radius: 5px;
-}
-
-a.pure-button-primary {
-    background: white;
-    color: #1f8dd6;
-    border-radius: 5px;
-    font-size: 120%;
-}
-
-
 /*
  * -- MENU STYLES --
- * I want to customize how my .pure-menu looks at the top of the page
  */
 
-.home-menu {
+.header {
     padding: 0.5em;
     text-align: center;
-    font-weight: bold;
-    height: 70px;
-}
-.home-menu {
     background: #292C37;
-}
-.pure-menu.pure-menu-fixed {
-    /* Fixed menus normally have a border at the bottom. */
+    color: #cccccc;
+    position: fixed;
+    top: 0;
+    width: 100%;
     border-bottom: none;
-    /* I need a higher z-index here because of the scroll-over effect. */
-    z-index: 4;
+    z-index: 5;
 }
 
-.home-menu .pure-menu-heading {
+.header .logo {
     text-transform: none;
     color: #cccccc;
     font-size: 150%;
     font-family: Cinzel, serif;
     font-weight: normal;
     
+    /*
     position: relative;
     padding-top: 0;
     padding-bottom: 0;
     transform: translateY(-50%);
     top: 50%;
+    */
 }
 
-.home-menu .pure-menu-heading span {
+.header .logo span {
     color: #9f111b;
     font-weight: bold;
 }
 
+.header .bars {
+    position: absolute;
+    left: 1em;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.navigation {
+    position: fixed;
+    z-index: 15;
+    height: 100%;
+    top: 0;
+    padding-top: 0.5em;
+    background: #292C37;
+    font-weight: bold;
+    font-size: 120%;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.navigation a {
+    display: block;
+    color: #cccccc;
+    width: 100%;
+    margin-left: 1em;
+    margin-right: 5em;
+}
+
+.shadow {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    visibility: hidden;
+}
+
+/*
 .home-menu ul {
     position: relative;
     padding-top: 0;
@@ -152,7 +149,7 @@ a.pure-button-primary {
     border: none;
     color: #b11623;
 }
-
+*/
 
 /*
  * -- SPLASH STYLES --
@@ -277,12 +274,9 @@ a.pure-button-primary {
 
     /* We can align the menu header to the left, but float the
     menu items to the right. */
-    .home-menu {
+    .header {
+        padding-left: 2em;
         text-align: left;
-    }
-    
-    .home-menu ul {
-        float: right;
     }
 
     /* We decrease the width of the .splash, since we have more width
@@ -317,32 +311,37 @@ a.pure-button-primary {
     }
 }
 
-@media (max-width: 35.5em) {
+@media (min-width: 35.5em) {
     .hidden-sm {
         display: none;
         visibility: hidden;
     }
 }
 
-@media (max-width: 48em) {
+@media (min-width: 48em) {
     .hidden-md {
         display: none;
         visibility: hidden;
     }
     
-    .pure-menu-heading {
+    .header .logo {
         width: 100%;
+    }
+    
+    .header .bars {
+        display: none;
+        visibility: hidden;
     }
 }
 
-@media (max-width: 64em) {
+@media (min-width: 64em) {
     .hidden-lg {
         display: none;
         visibility: hidden;
     }
 }
 
-@media (max-width: 80em) {
+@media (min-width: 80em) {
     .hidden-xl {
         display: none;
         visibility: hidden;
