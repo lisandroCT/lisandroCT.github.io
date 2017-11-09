@@ -248,7 +248,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     z-index: 2;
 }
 
-.section {
+.content-wrapper section {
 	margin-top: 4em;
 	padding: 1em;
 }
