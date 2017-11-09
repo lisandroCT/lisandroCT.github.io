@@ -117,6 +117,10 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     margin-right: 1em;
 }
 
+.header .navigation a.is-selected  {
+    color: #b11623;
+}
+
 .side-navigation {
     position: fixed;
     z-index: 15;
@@ -137,6 +141,10 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     color: #cccccc;
     width: 100%;
     margin-left: 1em;
+}
+
+.side-navigation a.is-selected  {
+    color: #b11623;
 }
 
 .shadow {

@@ -26,17 +26,19 @@
 <body>
 <div class="header">
     <i class="fa fa-bars bars" aria-hidden="true" onclick="openNav()"></i>
-    <a class="logo" href="#"><span>L</span>isandro <span>C</span>respo</a>
+    <nav>
+        <a class="logo" href="#"><span>L</span>isandro <span>C</span>respo</a>
 
-    <div class="navigation">
-        <a href="#portfolio">Portfolio</a>
-        <a href="#projects">Projects</a>
-        <a href="#">Blog</a>
-        <a href="#">Hire Me</a>
-    </div>
+        <div class="navigation">
+            <a href="#portfolio">Portfolio</a>
+            <a href="#projects">Projects</a>
+            <a href="#">Blog</a>
+            <a href="#">Hire Me</a>
+        </div>
+    </nav>
 </div>
     
-<div class="side-navigation" id="navbar">
+<div class="nav side-navigation" id="navbar">
     <a href="#portfolio" onclick="closeNav()">Portfolio</a>
     <a href="#projects" onclick="closeNav()">Projects</a>
     <a href="#" onclick="closeNav()">Blog</a>
@@ -45,149 +47,221 @@
     
 <div class="shadow" id="shadow" onclick="closeNav()"></div>
 
-<div class="splash-container">
-    <div class="splash">
-        <img class="profile-picture" src="img/profile-1.jpg">
-        <div class="presentation">
-            <p>
-                Hey, I’m an independent game programmer from Rosario, Argentina. I <i class="fa fa-heart" aria-hidden="true" style="color: #9f111b"></i> graphics technologies, rendering and game engines. I'm crazy about software architecture and clean code.
-            </p>
-            <p>
-                Have a look at my <a href="#portfolio">portfolio</a>, some of my <a href="#projects">projects</a> and <a href="">blog posts</a>. If you need help with an upcoming project, then consider <a href="">hiring me</a>.
-            </p>
-        </div>     
-        <div class="social">
-            <a href=""><i class="fa fa-envelope" aria-hidden="true"></i></a>
-            <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-            <a href=""><i class="fa fa-github" aria-hidden="true"></i></a>
-            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            <a href=""><i class="fa fa-skype" aria-hidden="true"></i></a>
+<section>
+    <div class="splash-container">
+        <div class="splash">
+            <img class="profile-picture" src="img/profile-1.jpg">
+            <div class="presentation">
+                <p>
+                    Hey, I’m an independent game programmer from Rosario, Argentina. I <i class="fa fa-heart" aria-hidden="true" style="color: #9f111b"></i> graphics technologies, rendering and game engines. I'm crazy about software architecture and clean code.
+                </p>
+                <p>
+                    Have a look at my <a href="#portfolio">portfolio</a>, some of my <a href="#projects">projects</a> and <a href="">blog posts</a>. If you need help with an upcoming project, then consider <a href="">hiring me</a>.
+                </p>
+            </div>     
+            <div class="social">
+                <a href=""><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-skype" aria-hidden="true"></i></a>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
 <div class="content-wrapper">
-    <div class="portfolio" id="portfolio">
-        <h1 class="is-center">Portfolio</h1>
+    <section>
+        <div class="portfolio" id="portfolio">
+            <h1 class="is-center">Portfolio</h1>
 
-        <div class="pure-g">
-            <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
-                <div class="frame">
-                    <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
-                    <h2>
-                        Sweet Meat
-                    </h2>
-                    <p>
-                        Free-to-Play endless runner with an innovative tweak: Twitter users can play God by sending threats to all active players in real-time.
-                    </p>
+            <div class="pure-g">
+                <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
+                    <div class="frame">
+                        <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
+                        <h2>
+                            Sweet Meat
+                        </h2>
+                        <p>
+                            Free-to-Play endless runner with an innovative tweak: Twitter users can play God by sending threats to all active players in real-time.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
-                <div class="frame">
-                    <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
-                    <h2>
-                        Fanta
-                    </h2>
-                    <p>
-                        Free-to-Play endless runner with an innovative tweak: Twitter users can play God by sending threats to all active players in real-time.
-                    </p>
+                <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
+                    <div class="frame">
+                        <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
+                        <h2>
+                            Fanta
+                        </h2>
+                        <p>
+                            Free-to-Play endless runner with an innovative tweak: Twitter users can play God by sending threats to all active players in real-time.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
-                <div class="frame">
-                    <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
-                    <h2>
-                        Powerade
-                    </h2>
-                    <p>
-                        Free-to-Play endless runner with an innovative tweak: Twitter users can play God by sending threats to all active players in real-time.
-                    </p>
+                <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
+                    <div class="frame">
+                        <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
+                        <h2>
+                            Powerade
+                        </h2>
+                        <p>
+                            Free-to-Play endless runner with an innovative tweak: Twitter users can play God by sending threats to all active players in real-time.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
-                <div class="frame">
-                    <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
-                    <h2>
-                        Max Steel
-                    </h2>
-                    <p>
-                        Free-to-Play endless runner with an innovative tweak: Twitter users can play God by sending threats to all active players in real-time.
-                    </p>
+                <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
+                    <div class="frame">
+                        <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
+                        <h2>
+                            Max Steel
+                        </h2>
+                        <p>
+                            Free-to-Play endless runner with an innovative tweak: Twitter users can play God by sending threats to all active players in real-time.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
-                <div class="frame">
-                    <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
-                    <h2>
-                        Barbie
-                    </h2>
-                    <p>
-                        Free-to-Play endless runner with an innovative tweak: Twitter users can play God by sending threats to all active players in real-time.
-                    </p>
+                <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
+                    <div class="frame">
+                        <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
+                        <h2>
+                            Barbie
+                        </h2>
+                        <p>
+                            Free-to-Play endless runner with an innovative tweak: Twitter users can play God by sending threats to all active players in real-time.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
-                <div class="frame">
-                    <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
-                    <h2>
-                        Blossom
-                    </h2>
-                    <p>
-                        Free-to-Play endless runner with an innovative tweak: Twitter users can play God by sending threats to all active players in real-time.
-                    </p>
+                <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
+                    <div class="frame">
+                        <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
+                        <h2>
+                            Blossom
+                        </h2>
+                        <p>
+                            Free-to-Play endless runner with an innovative tweak: Twitter users can play God by sending threats to all active players in real-time.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
-                <div class="frame">
-                    <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
-                    <h2>
-                        Trivias and minigames
-                    </h2>
-                    <p>
-                        Free-to-Play endless runner with an innovative tweak: Twitter users can play God by sending threats to all active players in real-time.
-                    </p>
+                <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
+                    <div class="frame">
+                        <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
+                        <h2>
+                            Trivias and minigames
+                        </h2>
+                        <p>
+                            Free-to-Play endless runner with an innovative tweak: Twitter users can play God by sending threats to all active players in real-time.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="projects" id="projects">
-        <h1 class="is-center">Projects</h1>
-
-        <div class="pure-g">
-            <div class="l-box pure-u-1 pure-u-lg-1-2">
-                <div class="frame">
-                    <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
-                    <h2>
-                        Virtual Machine
-                    </h2>
-                    <p>
-                        Virtual Machine written in C#.
-                    </p>
-                    <p>
-                        Not yet publicly available.
-                    </p>
-                </div>
-            </div>
-            <div class="l-box pure-u-1 pure-u-lg-1-2">
-                <div class="frame">
-                    <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
-                    <h2>
-                        KMath
-                    </h2>
-                    <p>
-                        Math library written in Kotlin.
-                    </p>
-                    <p>
-                        Not yet publicly available.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    </section>
     
+    <section>
+        <div class="projects" id="projects">
+            <h1 class="is-center">Projects</h1>
+
+            <div class="pure-g">
+                <div class="l-box pure-u-1 pure-u-lg-1-2">
+                    <div class="frame">
+                        <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
+                        <h2>
+                            Virtual Machine
+                        </h2>
+                        <p>
+                            Virtual Machine written in C#.
+                        </p>
+                        <p>
+                            Not yet publicly available.
+                        </p>
+                    </div>
+                </div>
+                <div class="l-box pure-u-1 pure-u-lg-1-2">
+                    <div class="frame">
+                        <img alt="File Icons" class="pure-img-responsive" src="img/sweet-meat.jpg">
+                        <h2>
+                            KMath
+                        </h2>
+                        <p>
+                            Math library written in Kotlin.
+                        </p>
+                        <p>
+                            Not yet publicly available.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    (function() {
+        'use strict';
+
+        var windowHeight = calculateHeight();
+        
+        var sections = document.querySelectorAll('section [id]');
+        var navLinks = document.querySelectorAll('nav div a');
+
+        function getClosestSection() {
+            var sectionsLength = sections.length;
+
+            var closestIndex = -1;
+            var closestDistance = 0;
+            for(var index = 0; index < sectionsLength; index++) {
+                var distance = getDistance(sections.item(index));
+                
+                if(distance > 0.4) {
+                    continue;
+                }
+
+                if(closestIndex == -1 || Math.abs(distance) < Math.abs(closestDistance)) {
+                    closestIndex = index;
+                    closestDistance = distance;
+                }
+            }
+            
+            Array.prototype.forEach.call(navLinks, function(element){
+                element.classList.remove('is-selected');
+            });
+
+            if(closestIndex == -1) {
+                return;
+            }
+            
+            selectLink(sections.item(closestIndex).id)
+        }
+
+        function getDistance(element) {
+            var position = element.getBoundingClientRect();
+            return position.top / windowHeight;
+        }
+
+        function selectLink(id) {
+            document.querySelector('a[href="#'+id+'"]').classList.add('is-selected');
+        }
+        
+        function calculateHeight() {
+            var w = window,
+                d = document,
+                e = d.documentElement,
+                g = d.getElementsByTagName('body')[0],
+                y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+            
+            return y;
+        }
+        
+        window.onresize = function(event) {
+            windowHeight = calculateHeight();
+        };
+        
+        window.onscroll = function(event) {
+            getClosestSection();
+        };
+    })();
+</script>
 <script>
     var navbar = document.getElementById("navbar");
     var shadow = document.getElementById("shadow");
