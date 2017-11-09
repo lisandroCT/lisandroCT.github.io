@@ -193,20 +193,17 @@
 <script>
     var navbar = document.getElementById("navbar");
     var shadow = document.getElementById("shadow");
-    var width = navbar.offsetWidth;
-    
-    closeNav();
     
     /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
     function openNav() {
-        navbar.style.width = width + "px";
+        navbar.style.left = "0";
         shadow.style.display = "inline";
         shadow.style.visibility = "visible";
     }
 
     /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
     function closeNav() {
-        navbar.style.width = "0px";
+        navbar.style.left = "-10em";
         shadow.style.display = "none";
         shadow.style.visibility = "hidden";
     }
