@@ -249,11 +249,19 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     z-index: 2;
 }
 
-.content-wrapper section {
+.content-wrapper .section {
     padding-top:4em;
 }
 
-.content-wrapper section h1 {
+.content-wrapper .section .translate {
+    transform: translateY(-4em);
+}
+
+.content-wrapper .section .double-translate {
+    transform: translateY(-8em);
+}
+
+.content-wrapper .section h1 {
     font-weight: 700;
     font-family: 'Dosis', sans-serif;
     color: #9f111b;
