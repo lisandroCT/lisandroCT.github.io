@@ -72,7 +72,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     text-transform: none;
     color: #cccccc;
     font-size: 150%;
-    font-family: 'Dosis', serif;
+    font-family: 'Dosis', sans-serif;
     font-weight: normal;
     
     /*
@@ -253,7 +253,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 
 .portfolio h1 {
     font-weight: 400;
-    font-family: 'Dosis', serif;
+    font-family: 'Dosis', sans-serif;
     color: #9f111b;
     margin-top: 1.5em;
 }
@@ -265,7 +265,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 
 .projects h1 {
     font-weight: 400;
-    font-family: 'Dosis', serif;
+    font-family: 'Dosis', sans-serif;
     color: #9f111b;
     margin-top: 1.5em;
 }
