@@ -286,9 +286,10 @@ a.pure-button-primary {
     .home-menu {
         text-align: left;
     }
-        .home-menu ul {
-            float: right;
-        }
+    
+    .home-menu ul {
+        float: right;
+    }
 
     /* We increase the height of the splash-container */
 /*    .splash-container {
@@ -325,6 +326,10 @@ a.pure-button-primary {
     .hidden-md {
         display: none;
         visibility: hidden;
+    }
+    
+    .pure-menu-heading {
+        width: 100%;
     }
 }
 
