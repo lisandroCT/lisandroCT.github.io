@@ -255,6 +255,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     font-weight: 400;
     font-family: Cinzel, serif;
     color: #9f111b;
+    margin-top: 1.5em;
 }
 
 .projects {
@@ -266,6 +267,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     font-weight: 400;
     font-family: Cinzel, serif;
     color: #9f111b;
+    margin-top: 1.5em;
 }
 
 .frame {
