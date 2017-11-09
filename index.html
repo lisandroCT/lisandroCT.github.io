@@ -32,18 +32,20 @@
         <div class="navigation">
             <a href="#portfolio">Portfolio</a>
             <a href="#projects">Projects</a>
-            <a href="#">Blog</a>
-            <a href="#">Hire Me</a>
+            <a href="">Blog</a>
+            <a href="">Hire Me</a>
         </div>
     </nav>
 </div>
-    
-<div class="nav side-navigation" id="navbar">
-    <a href="#portfolio" onclick="closeNav()">Portfolio</a>
-    <a href="#projects" onclick="closeNav()">Projects</a>
-    <a href="#" onclick="closeNav()">Blog</a>
-    <a href="#" onclick="closeNav()">Hire Me</a>
-</div>
+
+<nav>
+    <div class="nav side-navigation" id="navbar">
+        <a href="#portfolio" onclick="closeNav()">Portfolio</a>
+        <a href="#projects" onclick="closeNav()">Projects</a>
+        <a href="" onclick="closeNav()">Blog</a>
+        <a href="" onclick="closeNav()">Hire Me</a>
+    </div>
+</nav>
     
 <div class="shadow" id="shadow" onclick="closeNav()"></div>
 
@@ -203,7 +205,7 @@
         var windowHeight = calculateHeight();
         
         var sections = document.querySelectorAll('section [id]');
-        var navLinks = document.querySelectorAll('nav div a');
+        var navLinks = document.querySelectorAll('nav div a[href^="#"]');
 
         function getClosestSection() {
             var sectionsLength = sections.length;
@@ -239,8 +241,12 @@
             return position.top / windowHeight;
         }
 
-        function selectLink(id) {
-            document.querySelector('a[href="#'+id+'"]').classList.add('is-selected');
+        function selectLink(id) {            
+            Array.prototype.forEach.call(navLinks, function(element){
+                if(element.href.split("#")[1] == id) {
+                    element.classList.add('is-selected');
+                }
+            });
         }
         
         function calculateHeight() {
