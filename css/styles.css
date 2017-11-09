@@ -249,10 +249,10 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 }
 
 .content-wrapper section {
-	padding-top:4em
+    padding-top:4em;
 }
 
-.section h1 {
+.content-wrapper section h1 {
     font-weight: 700;
     font-family: 'Dosis', sans-serif;
     color: #9f111b;
