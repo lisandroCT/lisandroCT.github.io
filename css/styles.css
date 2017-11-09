@@ -210,7 +210,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 }
 
 .splash a {
-	font-weight: 500;
+	font-weight: 700;
 }
 
 .profile-picture {
@@ -289,6 +289,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     margin: 0;
     padding: 0.3em;
     position: absolute;
+    font-family: 'Dosis', sans-serif;
     top: 1.5em;
     background: rgba(41, 44, 55, 0.8);
 }
