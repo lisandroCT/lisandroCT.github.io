@@ -251,13 +251,18 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 }
 
 .frame {
-    box-shadow: 0 1px 8px rgba(0,0,0,0.3);
+    box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.3);
     background: #f0f0fa;
     color: #292c37;
     padding: 0.3em;
     width: fit-content;
     position: relative;
     margin: auto;
+    border-radius: 0.1em;
+}
+
+.frame img {
+    border-radius: 0.1em;
 }
 
 .frame h2 {
