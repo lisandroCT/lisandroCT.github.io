@@ -249,40 +249,46 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     z-index: 2;
 }
 
-.content-wrapper .section {
-    padding-top:4em;
+.portfolio {
+    padding: 1em;
+    background: #dddfe3;
 }
 
-.translate {
-    transform: translateY(-4em);
-}
-
-.double-translate {
-    transform: translateY(-8em);
-}
-
-.content-wrapper .section h1 {
+.portfolio h1 {
     font-weight: 700;
     font-family: 'Dosis', sans-serif;
     color: #9f111b;
-    margin: 0.5em;
-    margin-bottom: 1em;
-}
-
-.portfolio {
-    padding: 1em;
-    background: #e6e6e6;
+    width: 85%;
+    margin: 0.2em;
+    margin-bottom: 0.3em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0.2em;
+    border-bottom: 2px solid #9f111b;
 }
 
 .projects {
     padding: 1em;
-    background: #cccccc;
+    background: #caccd3;
+}
+
+.projects h1 {
+    font-weight: 700;
+    font-family: 'Dosis', sans-serif;
+    color: #9f111b;
+    width: 85%;
+    margin: 0.2em;
+    margin-bottom: 0.3em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0.2em;
+    border-bottom: 2px solid #9f111b;
 }
 
 .frame {
     box-shadow: 0 2px 8px rgba(0,0,0,0.6);
-    background: #292C37;
-    color: #f2f2f2;
+    background: #e6e6f5;
+    color: #292c37;
     padding: 0.3em;
     width: fit-content;
     position: relative;
@@ -296,12 +302,16 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     position: absolute;
     font-family: 'Dosis', sans-serif;
     top: 1.5em;
-    background: rgba(41, 44, 55, 0.8);
+    background: rgba(230, 230, 245, 0.8);
 }
 
 .frame p {
     margin: 0;
     font-weight: 300;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    padding-bottom: 0.3em;
+    text-align: justify;
 }
 
 /*
@@ -350,7 +360,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     }
     
     .social {
-        font-size: 180%;
+        font-size: 165%;
     }
 }
 
@@ -358,6 +368,14 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     .hidden-sm {
         display: none;
         visibility: hidden;
+    }
+    
+    .portfolio h1 {
+        width: 70%;
+    }
+    
+    .projects h1 {
+        width: 70%;
     }
 }
 
@@ -385,12 +403,28 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
         display: inline;
         visibility: visible;
     }
+    
+    .portfolio h1 {
+        width: 50%;
+    }
+    
+    .projects h1 {
+        width: 50%;
+    }
 }
 
 @media (min-width: 64em) {
     .hidden-lg {
         display: none;
         visibility: hidden;
+    }
+    
+    .portfolio h1 {
+        width: 30%;
+    }
+    
+    .projects h1 {
+        width: 30%;
     }
 }
 

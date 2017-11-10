@@ -18,13 +18,13 @@
     <!--<![endif]-->
 
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700|Roboto:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700|Roboto:300,400,700" rel="stylesheet">
 
     <link rel="stylesheet" href="css/styles.css">
 </head>
     
 <body>
-<div class="header">
+<div class="header" id="header">
     <i class="fa fa-bars bars" aria-hidden="true" onclick="openNav()"></i>
     <nav>
         <a class="logo" href="#"><span>L</span>isandro <span>C</span>respo</a>
@@ -74,8 +74,8 @@
 </section>
 
 <div class="content-wrapper">
-    <section class="section translate" id="portfolio">
-        <div class="portfolio">
+    <section>
+        <div class="portfolio" id="portfolio">
             <h1 class="is-center">Portfolio</h1>
 
             <div class="pure-g">
@@ -160,8 +160,8 @@
         </div>
     </section>
     
-    <section class="section double-translate" id="projects">
-        <div class="projects">
+    <section>
+        <div class="projects" id="projects">
             <h1 class="is-center">Projects</h1>
 
             <div class="pure-g">
@@ -197,7 +197,29 @@
         </div>
     </section>
 </div>
+<script src="js/smooth-scroll.min.js"></script>
+<script>
+    (function() {
+        var header = document.getElementById("header");
+        var headerHeight = getHeaderHeight();
 
+        function getHeaderHeight() {
+            //return header.getBoundingClientRect().height;
+            var position = header.getBoundingClientRect();
+            return position.height;
+        }
+
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            // Speed & Easing
+            speed: 500, // Integer. How fast to complete the scroll in milliseconds
+            offset: headerHeight // Integer or Function returning an integer. How far to offset the scrolling anchor location in pixels
+        });
+
+        window.onresize = function(event) {
+            headerHeight = getHeaderHeight();
+        };
+    })();
+</script>
 <script>
     (function() {
         'use strict';
@@ -261,6 +283,7 @@
         
         window.onresize = function(event) {
             windowHeight = calculateHeight();
+            getClosestSection();
         };
         
         window.onscroll = function(event) {
@@ -271,7 +294,7 @@
 <script>
     var navbar = document.getElementById("navbar");
     var shadow = document.getElementById("shadow");
-    
+
     function openNav() {
         navbar.style.left = "0";
         shadow.style.display = "inline";
