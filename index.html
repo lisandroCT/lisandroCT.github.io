@@ -18,7 +18,7 @@
     <!--<![endif]-->
 
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700|Roboto:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700|Roboto:300,400,700|Permanent+Marker|Patrick+Hand" rel="stylesheet">
 
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -230,9 +230,10 @@
         var navLinks = document.querySelectorAll('nav div a[href^="#"]');
 
         function getClosestSection() {
+            /*
             var sectionsLength = sections.length;
-
             var closestIndex = -1;
+            
             var closestDistance = 0;
             for(var index = 0; index < sectionsLength; index++) {
                 var distance = getDistance(sections.item(index));
@@ -247,15 +248,41 @@
                 }
             }
             
-            Array.prototype.forEach.call(navLinks, function(element){
-                element.classList.remove('is-selected');
-            });
+            for(var i = 0, n = navLinks.length; i < n; i++) {
+                navLinks[i].classList.remove('is-selected');
+            }
 
             if(closestIndex == -1) {
                 return;
             }
             
             selectLink(sections.item(closestIndex).id)
+            */
+            
+            var index = -1;
+            var max = 0;
+            for(var i = 0, n = sections.length; i < n; i++) {
+                var percentage = getPercentage(sections[i]);
+                
+                if(percentage <= 0) {
+                    continue;
+                }
+                
+                if(index == -1 || percentage > max) {
+                    index = i;
+                    max = percentage;
+                }
+            }
+            
+            for(var i = 0, n = navLinks.length; i < n; i++) {
+                navLinks[i].classList.remove('is-selected');
+            }
+
+            if(index == -1) {
+                return;
+            }
+            
+            selectLink(sections[index].id);
         }
 
         function getDistance(element) {
@@ -263,12 +290,26 @@
             return position.top / windowHeight;
         }
 
-        function selectLink(id) {            
-            Array.prototype.forEach.call(navLinks, function(element){
+        function getPercentage(element) {
+            var position = element.getBoundingClientRect();
+            
+            var top = Math.max(0, position.top);
+            var bottom = Math.min(windowHeight, position.bottom);
+            if(position.top > windowHeight || position.bottom < 0) {
+                return 0;
+            }
+            
+            return (bottom - top) / windowHeight;
+        }
+
+        function selectLink(id) {
+            for(var i = 0, n = navLinks.length; i < n; i++) {
+                var element = navLinks[i];
+                
                 if(element.href.split("#")[1] == id) {
                     element.classList.add('is-selected');
                 }
-            });
+            }
         }
         
         function calculateHeight() {
@@ -306,6 +347,19 @@
         shadow.style.display = "none";
         shadow.style.visibility = "hidden";
     }
+</script>
+<script>
+(function() {
+    var frames = document.getElementsByClassName("frame");
+    
+    for(var i = 0, n = frames.length; i < n; i++) {
+        var degrees = Math.random() * 3 - 1.5;
+        
+        frames[i].setAttribute("style", "-ms-transform: rotate(" + degrees + "deg);");
+        frames[i].setAttribute("style", "-webkit-transform: rotate(" + degrees + "deg);");
+        frames[i].setAttribute("style", "transform: rotate(" + degrees + "deg);");
+    }
+})();
 </script>
 </body>
 </html>

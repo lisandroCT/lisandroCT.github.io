@@ -249,14 +249,9 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     z-index: 2;
 }
 
-.portfolio {
-    padding: 1em;
-    background: #dddfe3;
-}
-
-.portfolio h1 {
-    font-weight: 700;
+.content-wrapper h1 {
     font-family: 'Dosis', sans-serif;
+    font-weight: 700;
     color: #9f111b;
     width: 85%;
     margin: 0.2em;
@@ -265,29 +260,21 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     margin-right: auto;
     padding-bottom: 0.2em;
     border-bottom: 2px solid #9f111b;
+}
+
+.portfolio {
+    padding: 1em;
+    background: #d2d4dd;
 }
 
 .projects {
     padding: 1em;
-    background: #caccd3;
-}
-
-.projects h1 {
-    font-weight: 700;
-    font-family: 'Dosis', sans-serif;
-    color: #9f111b;
-    width: 85%;
-    margin: 0.2em;
-    margin-bottom: 0.3em;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 0.2em;
-    border-bottom: 2px solid #9f111b;
+    background: #c6c8d0;
 }
 
 .frame {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.6);
-    background: #e6e6f5;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.3);
+    background: #f0f0fa;
     color: #292c37;
     padding: 0.3em;
     width: fit-content;
@@ -300,7 +287,8 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     margin: 0;
     padding: 0.3em;
     position: absolute;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Patrick Hand', cursive;
+    font-weight: bold;
     top: 1.5em;
     background: rgba(230, 230, 245, 0.8);
 }
@@ -312,6 +300,8 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     padding-right: 0.6em;
     padding-bottom: 0.3em;
     text-align: justify;
+    font-family: 'Patrick Hand', cursive;
+    line-height: 1.3;
 }
 
 /*
@@ -347,6 +337,11 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 }
 
 @media (min-width: 35.5em) {
+    .hidden-sm {
+        display: none;
+        visibility: hidden;
+    }
+    
     .profile-picture {
         display: inline;
         visibility: visible;
@@ -361,13 +356,6 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     
     .social {
         font-size: 165%;
-    }
-}
-
-@media (min-width: 35.5em) {
-    .hidden-sm {
-        display: none;
-        visibility: hidden;
     }
     
     .portfolio h1 {
@@ -404,11 +392,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
         visibility: visible;
     }
     
-    .portfolio h1 {
-        width: 50%;
-    }
-    
-    .projects h1 {
+    .content-wrapper h1 {
         width: 50%;
     }
 }
@@ -419,11 +403,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
         visibility: hidden;
     }
     
-    .portfolio h1 {
-        width: 30%;
-    }
-    
-    .projects h1 {
+    .content-wrapper h1 {
         width: 30%;
     }
 }
