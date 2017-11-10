@@ -18,7 +18,7 @@
     <!--<![endif]-->
 
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700|Roboto:300,400,700|Permanent+Marker|Patrick+Hand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700|Roboto:300,700|Patrick+Hand" rel="stylesheet">
 
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -230,35 +230,6 @@
         var navLinks = document.querySelectorAll('nav div a[href^="#"]');
 
         function getClosestSection() {
-            /*
-            var sectionsLength = sections.length;
-            var closestIndex = -1;
-            
-            var closestDistance = 0;
-            for(var index = 0; index < sectionsLength; index++) {
-                var distance = getDistance(sections.item(index));
-                
-                if(distance > 0.4) {
-                    continue;
-                }
-
-                if(closestIndex == -1 || Math.abs(distance) < Math.abs(closestDistance)) {
-                    closestIndex = index;
-                    closestDistance = distance;
-                }
-            }
-            
-            for(var i = 0, n = navLinks.length; i < n; i++) {
-                navLinks[i].classList.remove('is-selected');
-            }
-
-            if(closestIndex == -1) {
-                return;
-            }
-            
-            selectLink(sections.item(closestIndex).id)
-            */
-            
             var index = -1;
             var max = 0;
             for(var i = 0, n = sections.length; i < n; i++) {
@@ -283,11 +254,6 @@
             }
             
             selectLink(sections[index].id);
-        }
-
-        function getDistance(element) {
-            var position = element.getBoundingClientRect();
-            return position.top / windowHeight;
         }
 
         function getPercentage(element) {

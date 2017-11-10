@@ -23,6 +23,7 @@ body {
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
     font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 
 html a, button a, input a, select a, textarea a,
@@ -129,7 +130,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     width: 10em;
     top: 0;
     left: -10em;
-    padding-top: 0.5em;
+    padding-top: 2.5em;
     background: #292C37;
     font-weight: 700;
     font-size: 120%;
@@ -142,6 +143,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     color: #cccccc;
     width: 100%;
     margin-left: 1em;
+    margin-bottom: 1em;
 }
 
 .side-navigation a.is-selected  {
@@ -157,30 +159,6 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     display: none;
     visibility: hidden;
 }
-
-/*
-.home-menu ul {
-    position: relative;
-    padding-top: 0;
-    padding-bottom: 0;
-    transform: translateY(-50%);
-    top: 50%;
-}
-
-.home-menu .pure-menu-selected a {
-    color: #9f111b;
-}
-
-.home-menu a {
-    color: #cccccc;
-}
-.home-menu li a:hover,
-.home-menu li a:focus {
-    background: none;
-    border: none;
-    color: #b11623;
-}
-*/
 
 /*
  * -- SPLASH STYLES --
@@ -286,11 +264,16 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     font-size: 110%;
     margin: 0;
     padding: 0.3em;
+    padding-left: 1em;
+    padding-right: 1em;
     position: absolute;
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Dosis', sans-serif;
     font-weight: bold;
-    top: 1.5em;
-    background: rgba(230, 230, 245, 0.8);
+    top: 0.1em;
+    left: 0.1em;
+    background: #f0f0fa;
+    color: #9f111b;
+    border-radius: 0.3em 0;
 }
 
 .frame p {
