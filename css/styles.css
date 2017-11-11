@@ -28,13 +28,13 @@ html, button, input, select, textarea,
 
 html a, button a, input a, select a, textarea a,
 .pure-g [class *= "pure-u"] a {
-    color: #9f111b;
+    color: #813136;
     text-decoration: none;
 }
 
 html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 .pure-g [class *= "pure-u"] a:hover {
-    color: #b11623;
+    color: #8a282f;
 }
 
 /*
@@ -76,18 +76,10 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     font-size: 190%;
     font-family: 'Dosis', sans-serif;
     font-weight: normal;
-    
-    /*
-    position: relative;
-    padding-top: 0;
-    padding-bottom: 0;
-    transform: translateY(-50%);
-    top: 50%;
-    */
 }
 
 .header .logo span {
-    color: #9f111b;
+    color: #813136;
     font-weight: 700;
 }
 
@@ -115,12 +107,12 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 }
 
 .header .navigation a:hover {
-    color: #b11623;
+    color: #8a282f;
     margin-right: 1em;
 }
 
 .header .navigation a.is-selected  {
-    color: #b11623;
+    color: #8a282f;
 }
 
 .side-navigation {
@@ -147,7 +139,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 }
 
 .side-navigation a.is-selected  {
-    color: #b11623;
+    color: #8a282f;
 }
 
 .shadow {
@@ -193,21 +185,53 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 }
 
 .profile-picture {
+    border-radius: 50%;
+    height: 30%;
+    width: auto;
     display: none;
     visibility: hidden;
 }
 
 .presentation {
     text-align: center;
-    height: 70%;
+    height: 100%;
     overflow: hidden;
+}
+
+.hire-me {
+    text-align: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hire-me h1 {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    width: 100%;
+    margin: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0.2em;
+}
+
+.hire-me .div {
+    background: #813136;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    height: 2px;
 }
 
 .social {
     letter-spacing: 0.5em;
     font-size: 130%;
-    height: 30%;
+    position: absolute;
     text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 2em;
 }
 
 .social a{
@@ -230,14 +254,14 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 .content-wrapper h1 {
     font-family: 'Dosis', sans-serif;
     font-weight: 700;
-    color: #9f111b;
+    color: #813136;
     width: 85%;
     margin: 0.2em;
     margin-bottom: 0.3em;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 0.2em;
-    border-bottom: 2px solid #9f111b;
+    border-bottom: 2px solid #813136;
 }
 
 .portfolio {
@@ -248,6 +272,11 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 .projects {
     padding: 1em;
     background: #c6c8d0;
+}
+
+.skills {
+    padding: 1em;
+    background: #d2d4dd;
 }
 
 .frame {
@@ -277,7 +306,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     top: 0.1em;
     left: 0.1em;
     background: #f0f0fa;
-    color: #9f111b;
+    color: #813136;
     border-radius: 0.3em 0;
 }
 
@@ -333,24 +362,22 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     .profile-picture {
         display: inline;
         visibility: visible;
-        border-radius: 50%;
-        height: 30%;
-        width: auto;
     }
 
     .presentation {
-        height: 40%;
+        height: 70%;
     }
     
-    .social {
-        font-size: 165%;
-    }
-    
-    .portfolio h1 {
+    .hire-me .div {
         width: 70%;
     }
+        
+    .social {
+        font-size: 165%;
+        bottom: 3em;
+    }
     
-    .projects h1 {
+    .content-wrapper h1 {
         width: 70%;
     }
 }
@@ -380,6 +407,10 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
         visibility: visible;
     }
     
+    .hire-me .div {
+        width: 50%;
+    }
+    
     .content-wrapper h1 {
         width: 50%;
     }
@@ -389,6 +420,10 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     .hidden-lg {
         display: none;
         visibility: hidden;
+    }
+    
+    .hire-me .div {
+        width: 30%;
     }
     
     .content-wrapper h1 {

@@ -33,7 +33,7 @@
             <a href="#portfolio">Portfolio</a>
             <a href="#projects">Projects</a>
             <a href="">Blog</a>
-            <a href="">Hire Me</a>
+            <a href="hire-me">Hire Me</a>
         </div>
     </nav>
 </div>
@@ -43,35 +43,33 @@
         <a href="#portfolio" onclick="closeNav()">Portfolio</a>
         <a href="#projects" onclick="closeNav()">Projects</a>
         <a href="" onclick="closeNav()">Blog</a>
-        <a href="" onclick="closeNav()">Hire Me</a>
+        <a href="hire-me" onclick="closeNav()">Hire Me</a>
     </div>
 </nav>
     
 <div class="shadow" id="shadow" onclick="closeNav()"></div>
 
-<section>
-    <div class="splash-container">
-        <div class="splash">
-            <img class="profile-picture" src="img/profile-1.jpg">
-            <div class="presentation">
-                <p>
-                    Hey, I’m an independent game programmer from Rosario, Argentina. I <i class="fa fa-heart" aria-hidden="true" style="color: #9f111b"></i> graphics technologies, rendering and game engines. I'm crazy about software architecture and clean code.
-                </p>
-                <p>
-                    Have a look at my <a href="#portfolio">portfolio</a>, some of my <a href="#projects">projects</a> and <a href="">blog posts</a>. If you need help with an upcoming project, then consider <a href="">hiring me</a>.
-                </p>
-            </div>     
-            <div class="social">
-                <a href=""><i class="fa fa-envelope" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-github" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-skype" aria-hidden="true"></i></a>
-            </div>
+<div class="splash-container">
+    <div class="splash">
+        <img class="profile-picture" src="img/profile-1.jpg">
+        <div class="presentation">
+            <p>
+                Hey, I’m an independent game programmer from Rosario, Argentina. I <i class="fa fa-heart" aria-hidden="true" style="color: #8a4247; font-size: 85%;"></i> graphics technologies, rendering and game engines. I'm crazy about software architecture and clean code.
+            </p>
+            <p>
+                Have a look at my <a href="#portfolio">portfolio</a>, some of my <a href="#projects">projects</a> and <a href="">blog posts</a>. If you need help with an upcoming project, then consider <a href="">hiring me</a>.
+            </p>
+        </div>     
+        <div class="social">
+            <a href="mailto:hey@lisandroct.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            <a href="https://github.com/lisandroct"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <a href="https://linkedin.com/in/lisandroct"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/lisandroct"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://instagram.com/lisandroct"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="skype:lisandroct"><i class="fa fa-skype" aria-hidden="true"></i></a>
         </div>
     </div>
-</section>
+</div>
 
 <div class="content-wrapper">
     <section>
@@ -197,8 +195,8 @@
         </div>
     </section>
 </div>
-<script src="js/smooth-scroll.min.js"></script>
-<script>
+<script type="text/javascript" src="js/smooth-scroll.min.js"></script>
+<script type="text/javascript">
     (function() {
         var header = document.getElementById("header");
         var headerHeight = getHeaderHeight();
@@ -220,7 +218,7 @@
         };
     })();
 </script>
-<script>
+<script type="text/javascript">
     (function() {
         'use strict';
 
@@ -298,7 +296,7 @@
         };
     })();
 </script>
-<script>
+<script type="text/javascript">
     var navbar = document.getElementById("navbar");
     var shadow = document.getElementById("shadow");
 
@@ -314,7 +312,7 @@
         shadow.style.visibility = "hidden";
     }
 </script>
-<script>
+<script type="text/javascript">
 (function() {
     var frames = document.getElementsByClassName("frame");
     
