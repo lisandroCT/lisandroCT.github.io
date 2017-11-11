@@ -224,6 +224,10 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     height: 2px;
 }
 
+.hire-me .main {
+    font-size: 120%;
+}
+
 .social {
     letter-spacing: 0.5em;
     font-size: 130%;
