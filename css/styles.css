@@ -12,7 +12,7 @@ body {
     line-height:normal;
     color: #292C37;
     font-size: 13px;
-    background: #292C37; 
+    background: #292C37;
 }
 
 .pure-img-responsive {
@@ -172,21 +172,42 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 }
 
 .splash {
+    position: absolute;
+    top: 4em;
+    bottom: 4em;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    margin: auto;
-    margin-top: 4em;
     width: 90%;
-    height: 100%;
-    font-size: 150%;
 }
 
 .splash a {
 	font-weight: 700;
 }
 
+.social {
+    position: absolute;
+    height: 3em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    letter-spacing: 0.5em;
+    font-size: 150%;
+}
+
+.social a{
+    color: #cccccc;
+}
+
 .profile-picture {
     border-radius: 50%;
-    height: 30%;
+    height: 10em;
     width: auto;
     display: none;
     visibility: hidden;
@@ -196,12 +217,14 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     text-align: center;
     height: 100%;
     overflow: hidden;
+    font-size: 150%;
 }
 
 .hire-me {
     text-align: center;
     height: 100%;
     overflow: hidden;
+    font-size: 130%;
 }
 
 .hire-me h1 {
@@ -226,20 +249,6 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 
 .hire-me .main {
     font-size: 120%;
-}
-
-.social {
-    letter-spacing: 0.5em;
-    font-size: 130%;
-    position: absolute;
-    text-align: center;
-    left: 0;
-    right: 0;
-    bottom: 2em;
-}
-
-.social a{
-    color: #cccccc;
 }
 
 /*
@@ -346,9 +355,8 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     /* We decrease the width of the .splash, since we have more width
     to work with */
     .splash {
-        width: 70%;
-        max-width: 45em;
-        margin-top: 3em;
+        width: 80%;
+        max-width: 70em;
     }
 
     /* We remove the border-separator assigned to .l-box-lrg */
@@ -367,18 +375,13 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
         display: inline;
         visibility: visible;
     }
-
-    .presentation {
-        height: 70%;
-    }
     
     .hire-me .div {
         width: 70%;
     }
         
     .social {
-        font-size: 165%;
-        bottom: 3em;
+        font-size: 180%;
     }
     
     .content-wrapper h1 {
