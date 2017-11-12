@@ -179,8 +179,10 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     right: 0;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 3em;
     text-align: center;
     width: 90%;
+    overflow: auto;
 }
 
 .splash a {
@@ -189,10 +191,9 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 
 .social {
     position: absolute;
-    height: 3em;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 1em;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -214,16 +215,10 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 }
 
 .presentation {
-    text-align: center;
-    height: 100%;
-    overflow: hidden;
     font-size: 150%;
 }
 
 .hire-me {
-    text-align: center;
-    height: 100%;
-    overflow: hidden;
     font-size: 130%;
 }
 
