@@ -1,4 +1,3 @@
 url: "http://lisandroct.com"
-markdown: redcarpet
 baseurl: ""
 exclude: ['README.md']
