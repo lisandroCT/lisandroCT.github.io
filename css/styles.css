@@ -1,0 +1,450 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*
+ * -- BASE STYLES --
+ * Most of these are inherited from Base, but I want to change a few.
+ */
+body {
+    line-height:normal;
+    color: #292C37;
+    font-size: 13px;
+    background: #292C37;
+}
+
+.pure-img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+html a, button a, input a, select a, textarea a,
+.pure-g [class *= "pure-u"] a {
+    color: #813136;
+    text-decoration: none;
+}
+
+html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
+.pure-g [class *= "pure-u"] a:hover {
+    color: #8a282f;
+}
+
+/*
+ * -- LAYOUT STYLES --
+ * These are some useful classes which I will need
+ */
+.l-box {
+    padding: 1em;
+}
+
+.l-box-lrg {
+    padding: 2em;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.is-center {
+    text-align: center;
+}
+
+/*
+ * -- MENU STYLES --
+ */
+
+.header {
+    padding: 0.5em;
+    text-align: center;
+    background: #292C37;
+    color: #cccccc;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: none;
+    z-index: 5;
+}
+
+.header .logo {
+    text-transform: none;
+    color: #cccccc;
+    font-size: 190%;
+    font-family: 'Dosis', sans-serif;
+    font-weight: normal;
+}
+
+.header .logo span {
+    color: #813136;
+    font-weight: 700;
+}
+
+.header .bars {
+    position: absolute;
+    left: 1em;
+    transform: translateY(-50%);
+    top: 50%;
+    font-size: 135%;
+}
+
+.header .navigation {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 0;
+    display: none;
+    visibility: hidden;
+    font-weight: 700;
+}
+
+.header .navigation a {
+    color: #cccccc;
+    margin-right: 1em;
+}
+
+.header .navigation a:hover {
+    color: #8a282f;
+    margin-right: 1em;
+}
+
+.header .navigation a.is-selected  {
+    color: #8a282f;
+}
+
+.side-navigation {
+    position: fixed;
+    z-index: 15;
+    height: 100%;
+    width: 10em;
+    top: 0;
+    left: -10em;
+    padding-top: 2.5em;
+    background: #292C37;
+    font-weight: 700;
+    font-size: 120%;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.side-navigation a {
+    display: block;
+    color: #cccccc;
+    width: 100%;
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
+.side-navigation a.is-selected  {
+    color: #8a282f;
+}
+
+.shadow {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    visibility: hidden;
+}
+
+/*
+ * -- SPLASH STYLES --
+ * This is the blue top section that appears on the page.
+ */
+
+.splash-container {
+    background: #292C37;
+    z-index: 1;
+    overflow: hidden;
+    /* The following styles are required for the "scroll-over" effect */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed !important;
+    
+    color: #cccccc;
+}
+
+.splash {
+    position: absolute;
+    top: 4em;
+    bottom: 4em;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 3em;
+    text-align: center;
+    width: 90%;
+    overflow: auto;
+}
+
+.splash a {
+	font-weight: 700;
+}
+
+.social {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 1em;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    letter-spacing: 0.5em;
+    font-size: 150%;
+}
+
+.social a{
+    color: #cccccc;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    height: 10em;
+    width: auto;
+    display: none;
+    visibility: hidden;
+}
+
+.presentation {
+    font-size: 150%;
+}
+
+.hire-me {
+    font-size: 130%;
+}
+
+.hire-me h1 {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    width: 100%;
+    margin: 0.2em;
+    margin-bottom: 0.4em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0.2em;
+}
+
+.hire-me .div {
+    background: #813136;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    height: 2px;
+}
+
+.hire-me .main {
+    font-size: 120%;
+}
+
+/*
+ * -- CONTENT STYLES --
+ * This represents the content area (everything below the blue section)
+ */
+.content-wrapper {
+    /* These styles are required for the "scroll-over" effect */
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    min-height: 12%;
+    z-index: 2;
+}
+
+.content-wrapper h1 {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    color: #813136;
+    width: 85%;
+    margin: 0.2em;
+    margin-bottom: 0.3em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0.2em;
+    border-bottom: 2px solid #813136;
+}
+
+.portfolio {
+    padding: 1em;
+    background: #d2d4dd;
+}
+
+.projects {
+    padding: 1em;
+    background: #c6c8d0;
+}
+
+.skills {
+    padding: 1em;
+    background: #d2d4dd;
+}
+
+.frame {
+    box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.3);
+    background: #f0f0fa;
+    color: #292c37;
+    padding: 0.3em;
+    width: fit-content;
+    position: relative;
+    margin: auto;
+    border-radius: 0.1em;
+}
+
+.frame img {
+    border-radius: 0.1em;
+}
+
+.frame h2 {
+    font-size: 110%;
+    margin: 0;
+    padding: 0.3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    position: absolute;
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+    top: 0.1em;
+    left: 0.1em;
+    background: #f0f0fa;
+    color: #813136;
+    border-radius: 0.3em 0;
+}
+
+.frame p {
+    margin: 0;
+    font-weight: 300;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    padding-bottom: 0.3em;
+    text-align: justify;
+    font-family: 'Patrick Hand', cursive;
+    line-height: 1.3;
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+@media (min-width: 35.5em) {
+    .profile-picture {
+        display: inline;
+        visibility: visible;
+    }
+    
+    .hire-me .div {
+        width: 70%;
+    }
+        
+    .social {
+        font-size: 180%;
+    }
+    
+    .content-wrapper h1 {
+        width: 70%;
+    }
+}
+
+@media (max-width: 35.5em) {
+    .hidden-sm {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 48em) {
+    /* We increase the body font size */
+    body {
+        font-size: 16px;
+    }
+
+    /* We can align the menu header to the left, but float the
+    menu items to the right. */
+    .header {
+        padding-left: 2em;
+        text-align: left;
+    }
+
+    /* We decrease the width of the .splash, since we have more width
+    to work with */
+    .splash {
+        width: 80%;
+        max-width: 70em;
+    }
+
+    /* We remove the border-separator assigned to .l-box-lrg */
+    .l-box-lrg {
+        border: none;
+    }
+    
+    .header .logo {
+        width: 100%;
+    }
+    
+    .header .bars {
+        display: none;
+        visibility: hidden;
+    }
+    
+    .side-navigation {        
+        display: none;
+        visibility: hidden;
+    }
+    
+    .header .navigation {
+        display: inline;
+        visibility: visible;
+    }
+    
+    .hire-me .div {
+        width: 50%;
+    }
+    
+    .content-wrapper h1 {
+        width: 50%;
+    }
+}
+
+@media (max-width: 48em) {
+    .hidden-md {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 64em) {
+    .hire-me .div {
+        width: 30%;
+    }
+    
+    .content-wrapper h1 {
+        width: 30%;
+    }
+}
+
+@media (max-width: 64em) {
+    .hidden-lg {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 80em) {
+    .hidden-xl {
+        display: none;
+        visibility: hidden;
+    }
+}
