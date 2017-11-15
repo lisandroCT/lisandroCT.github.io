@@ -6,7 +6,6 @@
 
 /*
  * -- BASE STYLES --
- * Most of these are inherited from Base, but I want to change a few.
  */
 body {
     line-height:normal;
@@ -39,7 +38,6 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 
 /*
  * -- LAYOUT STYLES --
- * These are some useful classes which I will need
  */
 .l-box {
     padding: 1em;
@@ -52,6 +50,16 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 
 .is-center {
     text-align: center;
+}
+
+img {
+    border-radius: 0.2em;
+}
+
+
+.hidden {
+    display: none;
+    visibility: hidden;
 }
 
 /*
@@ -95,7 +103,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     position: absolute;
     transform: translateY(-50%);
     top: 50%;
-    right: 0;
+    right: 2em;
     display: none;
     visibility: hidden;
     font-weight: 700;
@@ -108,7 +116,6 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 
 .header .navigation a:hover {
     color: #8a282f;
-    margin-right: 1em;
 }
 
 .header .navigation a.is-selected  {
@@ -154,7 +161,6 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 
 /*
  * -- SPLASH STYLES --
- * This is the blue top section that appears on the page.
  */
 
 .splash-container {
@@ -214,15 +220,11 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     visibility: hidden;
 }
 
-.presentation {
-    font-size: 150%;
-}
-
-.hire-me {
+.splash-content {
     font-size: 130%;
 }
 
-.hire-me h1 {
+.splash-content h1 {
     font-family: 'Dosis', sans-serif;
     font-weight: 700;
     width: 100%;
@@ -233,7 +235,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     padding-bottom: 0.2em;
 }
 
-.hire-me .div {
+.splash-content .div {
     background: #813136;
     width: 85%;
     margin-left: auto;
@@ -242,16 +244,18 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     height: 2px;
 }
 
-.hire-me .main {
+.splash-content .main {
     font-size: 120%;
+}
+
+.presentation {
+    font-size: 150%;
 }
 
 /*
  * -- CONTENT STYLES --
- * This represents the content area (everything below the blue section)
  */
 .content-wrapper {
-    /* These styles are required for the "scroll-over" effect */
     position: absolute;
     top: 100%;
     width: 100%;
@@ -287,6 +291,10 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     background: #d2d4dd;
 }
 
+/*
+ * -- FRAME STYLES --
+ */
+
 .frame {
     box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.3);
     background: #f0f0fa;
@@ -298,10 +306,6 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     border-radius: 0.1em;
 }
 
-.frame img {
-    border-radius: 0.1em;
-}
-
 .frame h2 {
     font-size: 110%;
     margin: 0;
@@ -310,12 +314,12 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     padding-right: 1em;
     position: absolute;
     font-family: 'Dosis', sans-serif;
-    font-weight: bold;
+    font-weight: 700;
     top: 0.1em;
     left: 0.1em;
     background: #f0f0fa;
     color: #813136;
-    border-radius: 0.3em 0;
+    border-radius: 0.2em 0;
 }
 
 .frame p {
@@ -329,15 +333,132 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
     line-height: 1.3;
 }
 
-.hidden {
-    display: none;
-    visibility: hidden;
+/*
+ * -- BLOG STYLES --
+ */
+.blog {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 4em;
+    margin-bottom: 6em;
+    background: #d2d4dd;
+}
+
+.blog-content {
+    border-radius: 0.1em;
+    box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.3);
+    background: #f0f0fa;
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+.blog-content > h1 {
+    margin: 0;
+    padding-left: 0.5em;
+    margin-bottom: 0.2em;
+    font-size: 90%;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    color: #6c7593;
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid rgba(108, 117, 147, 0.3);
+}
+
+.blog-content > h2 {
+    margin: 0;
+    padding-left: 0.5em;
+    margin-bottom: 1em;
+    font-size: 120%;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    color: #6c7593;
+}
+
+.blog-content .frame {
+    box-shadow: none;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    width: fit-content;
+    position: relative;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+.blog-content .frame h2 {
+    font-size: 110%;
+    margin: 0;
+    padding: 0.3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    position: absolute;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    top: 0;
+    left: 0;
+    background: #f0f0fa;
+    color: #813136;
+    border-radius: 0 0 0.2em 0;
+}
+
+.post-frame {
+    color: #292c37;
+    width: 100%;
+}
+
+.post-frame h1 {
+    margin: 0;
+    padding-left: 0.5em;
+    margin-bottom: 0.2em;
+    font-size: 180%;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    color: #813136;
+}
+
+.post-frame .div {
+    background: #813136;
+    width: 30%;
+    margin-bottom: 0.3em;
+    height: 2px;
+}
+
+.post-frame p {
+    margin: 0;
+    font-weight: 300;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    padding-bottom: 0.3em;
+    text-align: justify;
+    line-height: 1.3;
+}
+
+.post-frame .date {
+    margin-bottom: 0.5em;
+    font-size: 75%;
+    color: #6c7593;
+}
+
+.post-excerpt {
+    padding-left: 0.5em;
+}
+
+.blog-social {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6em;
 }
 
 /*
- * -- TABLET (AND UP) MEDIA QUERIES --
- * On tablets and other medium-sized devices, we want to customize some
- * of the mobile styles.
+ * -- MEDIA QUERIES --
  */
 @media (min-width: 35.5em) {
     .profile-picture {
@@ -345,7 +466,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
         visibility: visible;
     }
     
-    .hire-me .div {
+    .splash-content .div {
         width: 70%;
     }
         
@@ -366,26 +487,20 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 }
 
 @media (min-width: 48em) {
-    /* We increase the body font size */
     body {
         font-size: 16px;
     }
 
-    /* We can align the menu header to the left, but float the
-    menu items to the right. */
     .header {
         padding-left: 2em;
         text-align: left;
     }
 
-    /* We decrease the width of the .splash, since we have more width
-    to work with */
     .splash {
         width: 80%;
         max-width: 70em;
     }
 
-    /* We remove the border-separator assigned to .l-box-lrg */
     .l-box-lrg {
         border: none;
     }
@@ -409,7 +524,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
         visibility: visible;
     }
     
-    .hire-me .div {
+    .splash-content .div {
         width: 50%;
     }
     
@@ -426,7 +541,7 @@ html a:hover, button a:hover, input a:hover, select a:hover, textarea a:hover,
 }
 
 @media (min-width: 64em) {
-    .hire-me .div {
+    .splash-content .div {
         width: 30%;
     }
     

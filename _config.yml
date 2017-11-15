@@ -1,3 +1,4 @@
 url: "http://lisandroct.com"
 baseurl: ""
 exclude: ['README.md']
+excerpt_separator: <!--more-->

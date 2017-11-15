@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Lisandro Crespo - Hire Me
-permalink: /hire-me/
+permalink: /hire-me
 ---
 
-<div class="hire-me">
+<div class="splash-content">
     <h1 class="hidden-md">
         Looking for a developer?
     </h1>

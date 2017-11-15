@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Independent game programmer from Argentina.">
-    <title>Lisandro Crespo</title>
+    <title>{{site.title}}</title>
  
     <!--[if lte IE 8]>
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
@@ -31,20 +31,14 @@
         <a class="logo" href="{{site.baseurl}}/#"><span>L</span>isandro <span>C</span>respo</a>
  
         <div class="navigation">
-            <a href="{{site.baseurl}}/#portfolio">Portfolio</a>
-            <a href="{{site.baseurl}}/#projects">Projects</a>
-            <a href="{{site.baseurl}}/blog">Blog</a>
-            <a href="{{site.baseurl}}/hire-me">Hire Me</a>
+            {% include navigation.md %}
         </div>
     </nav>
 </div>
  
 <nav>
     <div class="nav side-navigation" id="navbar">
-        <a href="{{site.baseurl}}/#portfolio" onclick="closeNav()">Portfolio</a>
-        <a href="{{site.baseurl}}/#projects" onclick="closeNav()">Projects</a>
-        <a href="{{site.baseurl}}/blog" onclick="closeNav()">Blog</a>
-        <a href="{{site.baseurl}}/hire-me" onclick="closeNav()">Hire Me</a>
+        {% include navigation.md %}
     </div>
 </nav>
     
