@@ -5,45 +5,52 @@
         <div class="l-box pure-u-1 pure-u-lg-3-4">
             {% for post in site.categories.blog %}
                 {% if post.featured %}
-                    <div class="blog-content">
-                        <h1>
-                            FEATURED POST
-                        </h1>
+                    <a href="{{post.url}}">
+                        <div class="blog-content">
+                                <div class="post-frame">
+                                    <div class="pure-g">
+                                        <div class="pure-u-1 pure-u-sm-2-5">
+                                            <img class="pure-img-responsive" src="{{site.baseurl}}/img/blog/{{post.img}}">
+                                        </div>
+                                        <div class="post-excerpt pure-u-1 pure-u-sm-3-5">
+                                            <h1>
+                                                {{post.title}}
+                                            </h1>
+                                            <div class="div"></div>
 
-                        <div class="post-frame">
-                            <h1>
-                                <a href="{{post.url}}">{{post.title}}</a>
-                            </h1>
-                            <div class="div"></div>
+                                            <p class="date">{{ post.date | date_to_long_string }}</p>
 
-                            <p class="date">{{ post.date | date_to_long_string }}</p>
-
-                            {{post.excerpt}}
-                        </div>
-                    </div>
+                                            {{post.excerpt}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                 {% endif %}
             {% endfor %}
             
             {% for post in site.categories.blog %}
-                <div class="blog-content">
-                    <div class="post-frame">
-                        <div class="pure-g">
-                            <div class="pure-u-1 pure-u-sm-2-5">
-                                <img class="pure-img-responsive" src="{{site.baseurl}}/img/blog/{{post.img}}">
-                            </div>
-                            <div class="post-excerpt pure-u-1 pure-u-sm-3-5">
-                                <h1>
-                                    <a href="{{post.url}}">{{post.title}}</a>
-                                </h1>
-                                <div class="div"></div>
+                <a href="{{post.url}}">
+                    <div class="blog-content">
+                            <div class="post-frame">
+                                <div class="pure-g">
+                                    <div class="pure-u-1 pure-u-sm-2-5">
+                                        <img class="pure-img-responsive" src="{{site.baseurl}}/img/blog/{{post.img}}">
+                                    </div>
+                                    <div class="post-excerpt pure-u-1 pure-u-sm-3-5">
+                                        <h1>
+                                            {{post.title}}
+                                        </h1>
+                                        <div class="div"></div>
 
-                                <p class="date">{{ post.date | date_to_long_string }}</p>
+                                        <p class="date">{{ post.date | date_to_long_string }}</p>
 
-                                {{post.excerpt}}
+                                        {{post.excerpt}}
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </a>
             {% endfor %}
         </div>
         
@@ -52,24 +59,30 @@
                 <h1>RECENT POSTS</h1>
 
                 {% for post in site.categories.blog %}
+                <a href="{{post.url}}">
                     <div class="frame">
                         <img class="pure-img-responsive" src="{{site.baseurl}}/img/blog/{{post.img}}">
                         <h2>
-                            <a href="{{post.url}}">{{post.title}}</a>
+                            {{post.title}}
                         </h2>
                     </div>
+                    </a>
                 {% endfor %}
             </div>
             
-            <div class="blog-content">
-                <h1>CATEGORIES</h1>
-
-                {% for post in site.categories.blog %}
-                    <h2>
-                        <a href="{{post.url}}">{{post.title}}</a>
-                    </h2>
-                {% endfor %}
-            </div>
+            {% assign tags = site.tags %}
+            {% unless tags.size == 0 %}
+                <div class="blog-content">
+                    <h1>CATEGORIES</h1>
+                    <ul class="tags-list">
+                        {% for tag in site.tags %}
+                            <li><a href="">
+                                {{tag[0] | capitalize}}
+                            </a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endunless %}
         </div>
     </div>
 </div>

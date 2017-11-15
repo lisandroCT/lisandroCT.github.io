@@ -388,7 +388,7 @@ img {
     width: fit-content;
     position: relative;
     margin: auto;
-    margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 .blog-content .frame h2 {
@@ -447,6 +447,16 @@ img {
 
 .post-excerpt {
     padding-left: 0.5em;
+}
+
+.tags-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tags-list li {
+    padding-top: 0.2em;
 }
 
 .blog-social {
