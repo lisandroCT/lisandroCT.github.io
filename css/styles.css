@@ -428,6 +428,16 @@ img {
     border-radius: 0 0 0.2em 0;
 }
 
+.cover {
+    width: 100%;
+    height: auto;
+}
+
+.thumbnail {
+    width: 100%;
+    height: auto;
+}
+
 .post-frame {
     color: #292c37;
     width: 100%;

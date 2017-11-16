@@ -15,7 +15,7 @@
                         <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1">
                             <div class="frame">
                                     <a href="{{post.url}}">
-                                        <img class="pure-img-responsive" src="{{site.baseurl}}/img/blog/{{post.img}}">
+                                        <img class="thumbnail" src="{{site.baseurl}}/img/blog/thumbnails/{{post.img}}">
                                     </a>
                                     <a href="{{post.url}}">
                                         <h2>
@@ -34,9 +34,12 @@
                     <h1>Tags</h1>
                     <ul class="tags-list">
                         {% for tag in tags %}
-                            <li><a href="{{site.baseurl}}{{tag.url}}">
-                                {{tag.tag | capitalize}}
-                            </a></li>
+                            {% assign posts = site.posts | where: 'tags', tag.tag %}
+                            {% unless posts.size == 0 %}
+                                <li><a href="{{site.baseurl}}{{tag.url}}">
+                                    {{tag.tag | capitalize}}
+                                </a></li>
+                            {% endunless %}
                         {% endfor %}
                     </ul>
                 </div>

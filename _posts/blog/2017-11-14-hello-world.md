@@ -1,0 +1,23 @@
+---
+layout: blog-post
+title: "Hello, world"
+date: 2017-11-14 09:54:28 -0300
+img: hello-world.png
+snippet: |-
+  fun greet() {
+      println("Hello, world")
+  }
+featured: false
+category: "blog"
+tags: ["personal"]
+---
+<p>
+    Hi! I'm Lisandro Crespo and this is my blog.
+</p>
+<p>
+    I'm a game programmer from Rosario, Argentina. I'm really passionate about rendering and graphics technologies, software architecture and clean code.
+</p>
+<!--more-->
+<p>
+    In this blog, I want to share with the world what I learn, my thoughts, helpful tips that save me a ton of time and headaches, my projects and snippets of code (and Gists?). I can sense the vast majority of the content will be around Unity, C#, Kotlin, game development, programming paradigms, graphics libraries, software architecture and clean code, but I love learning and exploring new horizons... So stay tuned!
+</p>
