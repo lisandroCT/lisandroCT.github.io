@@ -2,7 +2,6 @@
 layout: blog-post
 title: "Hello, world"
 date: 2017-11-14 09:54:28 -0300
-img: hello-world.png
 snippet: |-
   fun greet() {
       println("Hello, world")

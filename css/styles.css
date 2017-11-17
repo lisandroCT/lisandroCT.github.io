@@ -492,7 +492,7 @@ img {
 
 .post-frame .div {
     background: #813136;
-    width: 30%;
+    width: 55%;
     margin-bottom: 0.3em;
     height: 2px;
 }
@@ -571,6 +571,10 @@ img {
     .not-found {
         font-size: 2000%;
     }
+
+    .post-frame .div {
+        width: 40%;
+    }
 }
 
 @media (min-width: 48em) {
@@ -640,6 +644,10 @@ img {
 
     .post-excerpt {
         padding-left: 0.5em;
+    }
+
+    .post-frame .div {
+        width: 30%;
     }
 }
 
