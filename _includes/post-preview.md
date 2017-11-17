@@ -5,12 +5,14 @@
 
     <div class="post-frame">
         <div class="pure-g">
-            <div class="pure-u-1 pure-u-sm-1-3">
+            <div class="pure-u-1 pure-u-lg-1-3">
                 <a href="{{post.url}}">
-                    <img class="thumbnail" src="{{site.baseurl}}/img/blog/thumbnails/{{include.post.img}}">
+                    <div class="thumbnail snippet">
+                        {% highlight kotlin %}{{post.snippet}}{% endhighlight %}
+                    </div>
                 </a>
             </div>
-            <div class="post-excerpt pure-u-1 pure-u-sm-2-3">
+            <div class="post-excerpt pure-u-1 pure-u-lg-2-3">
                 {% include post-header.md post=include.post %}
 
                 {{include.post.excerpt}}

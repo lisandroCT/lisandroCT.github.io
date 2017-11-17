@@ -12,17 +12,17 @@
                 
                 <div class=pure-g>
                     {% for post in site.categories.blog %}
-                        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1">
-                            <div class="frame">
-                                    <a href="{{post.url}}">
-                                        <img class="thumbnail" src="{{site.baseurl}}/img/blog/thumbnails/{{post.img}}">
-                                    </a>
-                                    <a href="{{post.url}}">
+                        <div class="pure-u-1 pure-u-sm-1-3 pure-u-lg-1">
+                            <a href="{{post.url}}">
+                                <div style="padding: 0.2em; height: 100%;">
+                                    <div class="small-thumbnail snippet">
+                                        {% highlight kotlin %}{{post.snippet}}{% endhighlight %}
                                         <h2>
                                             {{post.title}}
                                         </h2>
-                                    </a>
-                            </div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     {% endfor %}
                 </div>

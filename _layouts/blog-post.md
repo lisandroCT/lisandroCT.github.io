@@ -3,11 +3,13 @@ layout: blog
 ---
 <div class="blog-content">
     <div class="post-frame">
-        <img class="cover hidden-md" src="{{site.baseurl}}/img/blog/covers/{{page.img}}">
+        <a href="{{post.url}}">
+            <div class="cover snippet">
+                {% highlight kotlin %}{{page.snippet}}{% endhighlight %}
+            </div>
+        </a>
         
         {% include post-header.md post=page %}
-        
-        {% highlight kotlin linenos %}{{page.snippet}}{% endhighlight %}
         
         {{content}}
     </div>

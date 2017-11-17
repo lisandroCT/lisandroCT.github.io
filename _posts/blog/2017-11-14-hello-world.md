@@ -12,10 +12,10 @@ category: "blog"
 tags: ["personal"]
 ---
 <p>
-    Hi! I'm Lisandro Crespo and this is my blog.
+    Hi! I'm Lisandro Crespo, a game programmer from Rosario, Argentina. I'm really passionate about rendering and graphics technologies, computer sciences, software architecture and clean code.
 </p>
 <p>
-    I'm a game programmer from Rosario, Argentina. I'm really passionate about rendering and graphics technologies, software architecture and clean code.
+    Welcome to my blog!
 </p>
 <!--more-->
 <p>
