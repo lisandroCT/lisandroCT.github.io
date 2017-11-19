@@ -18,4 +18,6 @@ Welcome to my blog!
 
 <!--more-->
 
-In this blog, I want to share with the world what I learn, my thoughts, helpful tips that save me a ton of time and headaches, my projects and snippets of code (and Gists?). I can sense the vast majority of the content will be around Unity, C#, Kotlin, game development, programming paradigms, graphics libraries, software architecture and clean code, but I love learning and exploring new horizons... So stay tuned!
+This will be my playground to document and share my last experiments, what I learn, my thoughts and projects, snippets of code (and Gists?) and some helpful time-saving tips.
+
+I can sense the vast majority of the content will be around Unity, C#, Kotlin, game development, programming paradigms, graphics libraries, software architecture and clean code, but I love learning and exploring new horizons... So stay tuned!
