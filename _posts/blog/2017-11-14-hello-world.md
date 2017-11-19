@@ -1,22 +1,21 @@
 ---
 layout: blog-post
-title: "Hello, world"
-date: 2017-11-14 09:54:28 -0300
+title: 'Hello, world'
+date: '2017-11-14 09:54:28 -0300'
 snippet: |-
   fun greet() {
       println("Hello, world")
   }
 featured: false
-category: "blog"
-tags: ["personal"]
+category: blog
+tags:
+  - personal
+published: true
 ---
-<p>
-    Hi! I'm Lisandro Crespo, a game programmer from Rosario, Argentina. I'm really passionate about rendering and graphics technologies, computer sciences, software architecture and clean code.
-</p>
-<p>
-    Welcome to my blog!
-</p>
+Hi! I'm Lisandro Crespo, a game programmer from Rosario, Argentina. I'm really passionate about rendering and graphics technologies, computer sciences, software architecture and clean code.
+
+Welcome to my blog!
+
 <!--more-->
-<p>
-    In this blog, I want to share with the world what I learn, my thoughts, helpful tips that save me a ton of time and headaches, my projects and snippets of code (and Gists?). I can sense the vast majority of the content will be around Unity, C#, Kotlin, game development, programming paradigms, graphics libraries, software architecture and clean code, but I love learning and exploring new horizons... So stay tuned!
-</p>
+
+In this blog, I want to share with the world what I learn, my thoughts, helpful tips that save me a ton of time and headaches, my projects and snippets of code (and Gists?). I can sense the vast majority of the content will be around Unity, C#, Kotlin, game development, programming paradigms, graphics libraries, software architecture and clean code, but I love learning and exploring new horizons... So stay tuned!
