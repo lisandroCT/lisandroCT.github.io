@@ -17,7 +17,7 @@ layout: blog
 
 <div class="blog-content">
     <h1>Leave a comment</h1>
-    <form id="comment-form" method="post" action="https://api.staticman.net/v2/entry/lisandroct/lisandroct.github.io/master" class="pure-form pure-form-stacked">
+    <form id="comment-form" method="POST" action="https://api.staticman.net/v2/entry/lisandroct/lisandroct.github.io/master" class="pure-form pure-form-stacked">
         <input name="options[slug]" type="hidden" value="{{page.slug}}">
         
         <fieldset>            
