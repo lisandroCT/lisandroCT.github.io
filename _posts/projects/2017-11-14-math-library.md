@@ -1,6 +1,5 @@
 ---
 title:  "Math Library"
-img: "sweet-meat.jpg"
 category: "projects"
 order: 2
 ---
