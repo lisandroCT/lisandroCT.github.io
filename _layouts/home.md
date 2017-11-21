@@ -13,7 +13,7 @@
                 {% for work in sorted_portfolio %}
                     <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
                         <div class="frame">
-                            <img class="pure-img-responsive" src="{{site.baseurl}}/img/portfolio/{% if work.img %}{{work.img}}{% else %}placeholder.svg{% endif %}">
+                            <img class="pure-img-responsive" src="{{site.baseurl}}/img/{% if work.img %}portfolio/{{work.img}}{% else %}placeholder.svg{% endif %}">
                             
                             <h2>
                                 {{work.title}}
@@ -38,7 +38,7 @@
                 {% for project in sorted_projects %}
                     <div class="l-box pure-u-1 pure-u-lg-1-2">
                         <div class="frame">
-                            <img class="pure-img-responsive" src="{{site.baseurl}}/img/projects/{% if project.img %}{{project.img}}{% else %}placeholder.svg{% endif %}">
+                            <img class="pure-img-responsive" src="{{site.baseurl}}/img/{% if project.img %}projects/{{project.img}}{% else %}placeholder.svg{% endif %}">
                             
                             <h2>
                                 {{project.title}}
