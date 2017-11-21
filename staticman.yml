@@ -21,8 +21,10 @@ comments:
   # (*) REQUIRED
   #
   # Destination path (filename) for the data files. Accepts placeholders.
-  filename: "entry{@timestamp}"
+  filename: "comment{@timestamp}"
 
+  # (*) REQUIRED
+  #
   # The format of the generated data files. Accepted values are "json", "yaml"
   # or "frontmatter"
   format: "yaml"
@@ -61,11 +63,6 @@ comments:
     #
     # Mailgun domain (encrypted)
     #domain: "4r3e2w1q"
-    
-  reCaptcha:
-    enabled: false
-    siteKey: "SITEKEY"
-    secret: "SECRET"
 
   # (*) REQUIRED
   #
