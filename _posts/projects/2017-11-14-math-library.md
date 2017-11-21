@@ -3,5 +3,6 @@ title:  "Math Library"
 category: "projects"
 order: 2
 ---
-<p>Math library written in Kotlin.</p>
-<p>Not yet publicly available.</p>
+Math library written in Kotlin.
+
+Not yet publicly available.
