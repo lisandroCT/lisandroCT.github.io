@@ -1,7 +1,8 @@
 ---
-title:  "Sweet Meat"
-img: "sweet-meat.jpg"
-category: "portfolio"
+title: Sweet Meat
+img: sweet-meat.jpg
+category: portfolio
 order: 1
+published: true
 ---
-<p>Free-to-Play endless runner with an innovative tweak: Twitter users can play God by sending threats to all active players in real-time.</p>
+Free-to-Play endless runner with an innovative tweak: Twitter users can play God by sending threats to all active players in real-time.
