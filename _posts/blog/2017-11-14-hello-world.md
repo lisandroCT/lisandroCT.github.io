@@ -1,16 +1,16 @@
 ---
-layout: blog-post
-title: 'Hello, world'
+title: Hello, world
 date: '2017-11-14 09:54:28 -0300'
 snippet: |-
   fun greet() {
       println("Hello, world")
   }
-featured: false
-category: blog
 tags:
   - personal
+featured: false
 published: true
+layout: blog-post
+category: blog
 ---
 Hi! I'm Lisandro Crespo, a game programmer from Rosario, Argentina. I'm really passionate about rendering and graphics technologies, computer sciences, software architecture and clean code.
 
