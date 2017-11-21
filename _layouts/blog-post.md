@@ -17,7 +17,7 @@ layout: blog
 
 <div class="blog-content">
     <h1>Leave a comment</h1>
-    <form id="comment-form" method="post" action="https://api.staticman.net/v1/entry/{{site.repository}}/{{site.staticman.branch}}" class="pure-form pure-form-stacked">
+    <form id="comment-form" method="post" action="https://api.staticman.net/v2/entry/{{site.repository}}/{{site.staticman.branch}}" class="pure-form pure-form-stacked">
         <fieldset>
             <input name="options[slug]" type="hidden" value="{{ page.slug }}">
             
