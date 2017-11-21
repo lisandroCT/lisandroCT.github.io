@@ -1,5 +1,6 @@
 ---
 title:  "Sweet Meat"
+img: "sweet-meat.jpg"
 category: "portfolio"
 order: 1
 ---
