@@ -1,6 +1,5 @@
 ---
 title:  "Virtual Machine"
-img: "sweet-meat.jpg"
 category: "projects"
 order: 1
 ---
