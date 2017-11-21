@@ -324,6 +324,11 @@ img {
     border-radius: 0.1em;
 }
 
+.frame img {
+    width: 100%;
+    height: auto;
+}
+
 .frame h2 {
     font-size: 110%;
     margin: 0;
