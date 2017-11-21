@@ -18,9 +18,9 @@ layout: blog
 <div class="blog-content">
     <h1>Leave a comment</h1>
     <form id="comment-form" method="post" action="https://api.staticman.net/v2/entry/{{site.repository}}/{{site.staticman.branch}}" class="pure-form pure-form-stacked">
-        <fieldset>
-            <input name="options[slug]" type="hidden" value="{{ page.slug }}">
-            
+        <input name="options[slug]" type="hidden" value="{{page.slug}}">
+        
+        <fieldset>            
             <label for="comment-form-message">Message <small>(<a href="https://kramdown.gettalong.org/quickref.html">Markdown</a> is allowed)</small></label>
             <textarea id="comment-form-message" name="fields[message]" class="pure-input-1" required></textarea>
             
@@ -54,52 +54,3 @@ layout: blog
         </fieldset>
     </form>
 </div>
-
-<script type="text/javascript">
-    (function() {
-        var form = document.getElementById("comment-form");
-        var button = document.getElementById("comment-form-submit");
-        
-        form.onsubmit = function(event) {
-            event.preventDefault();
-            
-            sendData();
-        };
-        
-        function sendData() {
-            button.disabled = true;
-            
-            var xhr = new XMLHttpRequest();
-            var fd = new FormData(form);
-            
-            
-            xhr.onload = function(event) {
-                if(xhr.status == 200) {
-                    onLoad();
-                } else {
-                    onError();
-                }
-                
-                button.disabled = false;
-            };
-            
-            xhr.onerror = function(event) {
-                onError();
-                
-                button.disabled = false;
-            };
-            
-            xhr.open(form.method, form.action);
-            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            xhr.send(fd);
-        }
-        
-        function onLoad() {
-            alert("Success!");
-        }
-        
-        function onError() {
-            alert("Snap!");
-        }
-    })();
-</script>

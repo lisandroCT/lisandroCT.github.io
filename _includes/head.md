@@ -21,7 +21,9 @@
     <link rel="stylesheet" href="{{site.baseurl}}/css/styles.css">
     <link rel="stylesheet" href="{{site.baseurl}}/css/highlights.css">
     
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+    {% if page.layout == "blog-post" %}
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+    {% endif %}
 </head>
     
 <body>
