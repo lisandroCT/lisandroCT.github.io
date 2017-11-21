@@ -8,10 +8,10 @@ defaults:
   - 
     scope: 
       path: ""
-      type: "blog-tags"
+      type: blog-tags
     values: 
       color: "108, 117, 147"
-      layout: "blog-tag"
+      layout: blog-tag
 excerpt_separator: "<!--more-->"
 exclude: 
   - README.md
