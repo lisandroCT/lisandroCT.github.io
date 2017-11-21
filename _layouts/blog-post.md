@@ -17,7 +17,7 @@ layout: blog
 
 <div class="blog-content">
     <h1>Leave a comment</h1>
-    <form id="comment-form" method="post" action="https://api.staticman.net/v2/entry/{{site.repository}}/{{site.staticman.branch}}" class="pure-form pure-form-stacked">
+    <form id="comment-form" method="post" action="https://api.staticman.net/v2/entry/{{site.repository}}/{{site.staticman.branch}}/comments" class="pure-form pure-form-stacked">
         <input name="options[slug]" type="hidden" value="{{page.slug}}">
         
         <fieldset>            
@@ -33,7 +33,7 @@ layout: blog
                 <div class="pure-u-lg-1-24 hidden-md"></div>
 
                 <div class="pure-u-1 pure-u-lg-14-24">
-                    <label for="comment-form-email">Email <small>(used for <a href="http://gravatar.com">Gravatar</a> image and reply notifications)</small></label>
+                    <label for="comment-form-email">Email <small>(used for <a href="http://gravatar.com">Gravatar</a> image and reply notifications, will not be public)</small></label>
                     <input id="comment-form-email" name="fields[email]" type="email" class="pure-input-1" required>
                 </div>
             </div>
