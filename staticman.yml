@@ -62,10 +62,10 @@ comments:
     # Mailgun domain (encrypted)
     #domain: "4r3e2w1q"
     
-reCaptcha:
-  enabled: false
-  siteKey: "SITEKEY"
-  secret: "SECRET"
+  reCaptcha:
+    enabled: false
+    siteKey: "SITEKEY"
+    secret: "SECRET"
 
   # (*) REQUIRED
   #
