@@ -37,7 +37,7 @@
                 {% for project in sorted_projects %}
                     <div class="l-box pure-u-1 pure-u-lg-1-2">
                         <div class="frame">
-                            <img class="pure-img-responsive" src="{{site.baseurl}}/img/projects/{% if project.img %}{{project.img}}{% else %}placeholder.png{% endif %}">
+                            <img class="pure-img-responsive" src="{{site.baseurl}}/img/projects/{% if project.img %}{{project.img}}{% else %}'placeholder.png'{% endif %}">
                             <h2>
                                 {{project.title}}
                             </h2>
