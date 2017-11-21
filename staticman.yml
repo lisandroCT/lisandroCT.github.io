@@ -1,24 +1,17 @@
---- 
 comments: 
-  allowedFields: 
-    - name
-    - email
-    - message
-  branch: master
+  allowedFields: ["name", "email", "message"]
+  branch: "master"
   commitMessage: "New comment"
   filename: "comment-{@timestamp}"
-  format: yaml
+  format: "yaml"
   generatedFields: 
     date: 
+      type: "date"
       options: 
-        format: timestamp-seconds
-      type: date
+        format: "iso8601"
   moderation: false
-  name: lisandroct.com
+  name: "lisandroct.com"
   path: "_data/comments/{options.slug}"
-  requiredFields: 
-    - name
-    - email
-    - message
+  requiredFields: ["name", "email", "message"]
   transforms: 
     email: md5

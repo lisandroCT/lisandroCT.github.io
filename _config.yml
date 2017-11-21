@@ -1,12 +1,10 @@
---- 
-baseurl: ""
+url: "http://lisandroct.com"
 collections: 
   blog-tags: 
     output: true
-    permalink: "/blog/tags/:name/"
+    permalink: /blog/tags/:name/
 defaults: 
-  - 
-    scope: 
+  - scope: 
       path: ""
       type: blog-tags
     values: 
@@ -15,4 +13,3 @@ defaults:
 excerpt_separator: "<!--more-->"
 exclude: 
   - README.md
-url: "http://lisandroct.com"
