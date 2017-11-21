@@ -16,3 +16,9 @@ defaults:
     values:
       layout: blog-tag
       color: "108, 117, 147"
+      
+repository: "lisandroCT/lisandroct.github.io"
+      
+# Staticman comments (full configuration in staticman.yml)
+staticman:
+  branch: "master"
