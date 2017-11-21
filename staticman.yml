@@ -10,7 +10,7 @@ comments:
       options: 
         format: "iso8601"
   moderation: false
-  name: "lisandroct.com"
+  name: "lisandroct.github.io"
   path: "_data/comments/{options.slug}"
   requiredFields: ["name", "email", "message"]
   transforms: 
