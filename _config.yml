@@ -1,18 +1,18 @@
-url: "http://lisandroct.com"
+--- 
 baseurl: ""
-exclude: ['README.md']
-
-excerpt_separator: <!--more-->
-
-collections:
-  blog-tags:
-    permalink: /blog/tags/:name/
+collections: 
+  blog-tags: 
     output: true
-
-defaults:
-  - scope:
+    permalink: "/blog/tags/:name/"
+defaults: 
+  - 
+    scope: 
       path: ""
-      type: blog-tags
-    values:
-      layout: blog-tag
+      type: "blog-tags"
+    values: 
       color: "108, 117, 147"
+      layout: "blog-tag"
+excerpt_separator: "<!--more-->"
+exclude: 
+  - README.md
+url: "http://lisandroct.com"
