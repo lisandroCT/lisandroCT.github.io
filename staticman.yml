@@ -3,6 +3,7 @@ comments:
   requiredFields: ["name", "email", "message"]
   transforms: 
     email: md5
+    message: "frontmatterContent"
   
   name: "lisandroct.com"
   
@@ -28,7 +29,3 @@ comments:
   
   path: "_data/comments/{options.slug}"
   filename: "comment-{@timestamp}"
-  
-  format: "frontmatter"
-  transforms:
-    message: "frontmatterContent"
