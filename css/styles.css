@@ -408,18 +408,30 @@ img {
     line-height: 2;
 }
 
-.details .date {
+.details span {
     white-space: nowrap;
+}
+
+.details .time {
+    margin-left: 0.5em;
+    margin-right: 1.5em;
+}
+
+.details .date {
     margin-right: 1.5em;
 }
 
 .details .tags {
-    white-space: nowrap;
     margin-right: 0.5em;
     padding: 0.3em;
     padding-left: 0.6em;
     padding-right: 0.6em;
     border-radius: 0.3em;
+}
+
+.details .reply {
+    float: right;
+    margin-right: 1em;
 }
 
 .cover {
@@ -495,21 +507,18 @@ img {
     color: #813136;
 }
 
+.post-frame p {
+    margin: 0;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    margin-bottom: 0.6em;
+}
+
 .post-frame .div {
     background: #813136;
     width: 55%;
     margin-bottom: 0.3em;
     height: 2px;
-}
-
-.post-frame p {
-    margin: 0;
-    font-weight: 300;
-    padding-left: 0.6em;
-    padding-right: 0.6em;
-    margin-bottom: 0.6em;
-    text-align: justify;
-    line-height: 1.3;
 }
 
 .tags-list {
@@ -530,6 +539,22 @@ img {
     height: 6em;
 }
 
+/*
+ * -- COMMENT FORM STYLES --
+ */
+.post-frame .user-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.user-content p {
+    padding: 0;
+    margin-top: 0.3em;
+    margin-bottom: 0.8em;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 1.3;
+}
 
 /*
  * -- COMMENT FORM STYLES --
@@ -569,7 +594,6 @@ img {
     margin-top: 0.5em;
     position: relative;
     padding-left: 5em;
-    min-height: 8em;
 }
 
 .comment .avatar {
@@ -587,6 +611,7 @@ img {
     height: 100%;
     padding: 0.3em;
     padding-bottom: 0.5em;
+    min-height: 5em;
 }
 
 .comment .comment-content h1 {

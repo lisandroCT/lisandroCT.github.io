@@ -11,7 +11,9 @@ layout: blog
         
         {% include post-header.md post=page %}
         
-        {{content}}
+        <div class="user-content">
+            {{content}}
+        </div>
     </div>
 </div>
 

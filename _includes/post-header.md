@@ -6,6 +6,7 @@
 <div class="div"></div>
 
 <p class="details">
+    <span class="time"><i class="fa fa-clock-o" aria-hidden="true"></i> {{include.post.date | date: "%I:%M %p" }}</span>
     <span class="date"><i class="fa fa-calendar" aria-hidden="true"></i> {{include.post.date | date_to_long_string }}</span>
     {% assign tags = site.blog-tags %}
     {% unless tags.size == 0 %}

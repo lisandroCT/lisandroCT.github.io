@@ -2,11 +2,10 @@ comments:
   allowedFields: ["name", "email", "message"]
   requiredFields: ["name", "email", "message"]
   
-  format: "frontmatter"
+  format: "yaml"
     
   transforms: 
     email: md5
-    message: frontmatterContent
   
   name: "lisandroct.com"
   
@@ -29,4 +28,4 @@ comments:
     secret: "QYZHb1y4/fYu7zbUO8HIK2HJplQAqBgYdao/BXJfbF4Ywwm8OpCmQhR56sGtMjan4kytj84AOF87kNpwu1Mb7Oppgj3xIX9q0k08bQxEOPGV5Z0MXRcteT1EUm4WYOb2j80r1pOkG7qZ32y3tEakCQqvT7pHjus18kOT4MhzhKI="
   
   path: "_data/comments/{options.slug}"
-  filename: "comment-{@timestamp}"
+  filename: "{options.slug}-{@timestamp}"
