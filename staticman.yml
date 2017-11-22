@@ -2,9 +2,11 @@ comments:
   allowedFields: ["name", "email", "message"]
   requiredFields: ["name", "email", "message"]
   
+  format: "frontmatter"
+    
   transforms: 
     email: md5
-    message: "frontmatterContent"
+    message: frontmatterContent
   
   name: "lisandroct.com"
   
@@ -12,8 +14,6 @@ comments:
   
   branch: "master"
   commitMessage: "New comment"
-  
-  format: "frontmatter"
   
   generatedFields: 
     date: 
