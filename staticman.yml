@@ -28,3 +28,7 @@ comments:
   
   path: "_data/comments/{options.slug}"
   filename: "comment-{@timestamp}"
+  
+  format: "frontmatter"
+  transforms:
+    message: "frontmatterContent"
