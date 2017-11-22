@@ -16,6 +16,14 @@ layout: blog
 </div>
 
 <div class="blog-content">
+    {% assign comments = site.data.comments[page.slug] | sort %}
+    {% unless comments.size == 0 %}
+        <h1>Comments</h1>
+        {% for comment in comments %}
+            <img src="https://www.gravatar.com/avatar/{{comment.email}}"/>
+        {% endfor %}
+        <div style="height: 2em;"></div>
+    {% endunless %}
     <h1>Leave a comment</h1>
     <form id="comment-form" method="POST" action="{{site.staticman_url}}" class="pure-form pure-form-stacked comment-form">
         <input name="options[slug]" type="hidden" value="{{page.slug}}">
@@ -41,6 +49,10 @@ layout: blog
             <label for="terms" class="pure-checkbox">
                 <input id="comment-form-subscribe" name="field[subscribe]" type="checkbox"> Notify me of replies by email.
             </label>
+        </fieldset>
+        
+        <fieldset>
+            <div class="g-recaptcha" data-sitekey="6Le1GDkUAAAAAIL1mWQaHx3uapvh_ek2Gjpz4Fpn"></div>
         </fieldset>
         
         <div id="comment-log" class="log hidden">
