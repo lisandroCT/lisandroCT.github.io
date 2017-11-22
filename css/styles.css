@@ -452,23 +452,6 @@ img {
     background: none;
 }
 
-/*
-.snippet .highlight {
-    position: relative;
-    background: none;
-    margin: 0;
-    transform: translateY(-50%);
-    top: 50%;
-}
-
-.snippet .highlight pre {
-    overflow: visible;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-}
-*/
-
 .snippet .highlight code {
     font-family: 'Patrick Hand', cursive;
     text-shadow: 2px 4px 2px black;
@@ -544,6 +527,11 @@ img {
     left: 0;
     right: 0;
     height: 6em;
+}
+
+.comment-form .message-textarea {
+    resize: vertical;
+    min-height: 6em;
 }
 
 /*
@@ -647,6 +635,14 @@ img {
 
     .post-frame .div {
         width: 30%;
+    }
+
+    .comment-form .name-input {
+        padding-right: 0.5em;
+    }
+
+    .comment-form .email-input {
+        padding-left: 0.5em;
     }
 }
 

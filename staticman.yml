@@ -1,17 +1,25 @@
 comments: 
   allowedFields: ["name", "email", "message"]
+  requiredFields: ["name", "email", "message"]
+  transforms: 
+    email: md5
+  
+  name: "lisandroct.com"
+  
+  allowedOrigins: ["localhost", "lisandroct.com"]
+  
   branch: "master"
   commitMessage: "New comment"
-  filename: "comment-{@timestamp}"
+  
   format: "yaml"
+  
   generatedFields: 
     date: 
       type: "date"
       options: 
         format: "iso8601"
+  
   moderation: false
-  name: "lisandroct.com"
+  
   path: "_data/comments/{options.slug}"
-  requiredFields: ["name", "email", "message"]
-  transforms: 
-    email: md5
+  filename: "comment-{@timestamp}"

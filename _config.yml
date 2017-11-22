@@ -1,8 +1,11 @@
 url: "http://lisandroct.com"
+baseurl: ""
+
 collections: 
   blog-tags: 
     output: true
     permalink: /blog/tags/:name/
+
 defaults: 
   - scope: 
       path: ""
@@ -10,6 +13,10 @@ defaults:
     values: 
       color: "108, 117, 147"
       layout: blog-tag
+
 excerpt_separator: "<!--more-->"
+
 exclude: 
   - README.md
+
+staticman_url: https://api.staticman.net/v2/entry/lisandroct/lisandroct.github.io/master/comments
