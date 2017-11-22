@@ -24,7 +24,7 @@ comments:
   reCaptcha:
     enabled: true
     siteKey: "6Le1GDkUAAAAAIL1mWQaHx3uapvh_ek2Gjpz4Fpn"
-    secret: "OzB2qwF86uOrqk+7x4U3j1O5d8jVDKtEuljNxqkZ8U5FsoBJHP9RPxmAokl+WILKEUGTQLMbLPcLxg6l8asZwH0UbjsBt4stgQVVMYdK0rgOsst83jKvzOtfUqkK+fa5UjxyXEGd4MqvZpPMwKA2esnaHIWMJ0FF++O8C7dVCx8="
+    secret: "QYZHb1y4/fYu7zbUO8HIK2HJplQAqBgYdao/BXJfbF4Ywwm8OpCmQhR56sGtMjan4kytj84AOF87kNpwu1Mb7Oppgj3xIX9q0k08bQxEOPGV5Z0MXRcteT1EUm4WYOb2j80r1pOkG7qZ32y3tEakCQqvT7pHjus18kOT4MhzhKI="
   
   path: "_data/comments/{options.slug}"
   filename: "comment-{@timestamp}"
