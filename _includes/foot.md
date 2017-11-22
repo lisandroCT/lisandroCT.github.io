@@ -1,27 +1,27 @@
+<script type="text/javascript" src="{{site.baseurl}}/js/smooth-scroll.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        var header = document.getElementById("header");
+        var headerHeight = getHeaderHeight() + 5;
+
+        function getHeaderHeight() {
+            //return header.getBoundingClientRect().height;
+            var position = header.getBoundingClientRect();
+            return position.height;
+        }
+
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            // Speed & Easing
+            speed: 500, // Integer. How fast to complete the scroll in milliseconds
+            offset: headerHeight // Integer or Function returning an integer. How far to offset the scrolling anchor location in pixels
+        });
+
+        window.onresize = function(event) {
+            headerHeight = getHeaderHeight();
+        };
+    })();
+</script>
 {% if page.layout == "home" %}
-    <script type="text/javascript" src="{{site.baseurl}}/js/smooth-scroll.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            var header = document.getElementById("header");
-            var headerHeight = getHeaderHeight();
-
-            function getHeaderHeight() {
-                //return header.getBoundingClientRect().height;
-                var position = header.getBoundingClientRect();
-                return position.height;
-            }
-
-            var scroll = new SmoothScroll('a[href*="#"]', {
-                // Speed & Easing
-                speed: 500, // Integer. How fast to complete the scroll in milliseconds
-                offset: headerHeight // Integer or Function returning an integer. How far to offset the scrolling anchor location in pixels
-            });
-
-            window.onresize = function(event) {
-                headerHeight = getHeaderHeight();
-            };
-        })();
-    </script>
     <script type="text/javascript">
         (function() {
             'use strict';
@@ -173,6 +173,22 @@
         };
     </script>
     <script type="text/javascript">
+        function reply(id) {
+            var parent = document.getElementById("comment-form-parent");
+            parent.value = id;
+            
+            var label = document.getElementById("replying-label");
+            label.classList.remove("hidden");
+        }
+    
+        function cancelReply() {
+            var parent = document.getElementById("comment-form-parent");
+            parent.value = "";
+            
+            var label = document.getElementById("replying-label");
+            label.classList.add("hidden");
+        }
+        
         (function() {
             var form = document.getElementById("comment-form");
             var button = document.getElementById("comment-form-submit");
