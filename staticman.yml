@@ -2,7 +2,6 @@ comments:
   allowedFields: ["name", "email", "message"]
   requiredFields: ["name", "email", "message"]
   
-  format: "frontmatter"
   transforms: 
     email: md5
     message: "frontmatterContent"
@@ -14,7 +13,7 @@ comments:
   branch: "master"
   commitMessage: "New comment"
   
-  format: "yaml"
+  format: "frontmatter"
   
   generatedFields: 
     date: 
