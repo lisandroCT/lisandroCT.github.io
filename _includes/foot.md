@@ -176,6 +176,10 @@
         (function() {
             var form = document.getElementById("comment-form");
             var button = document.getElementById("comment-form-submit");
+            var buttonContent = button.innerHTML;
+            var log = document.getElementById("comment-log");
+            
+            var timeout = null;
 
             form.onsubmit = function(event) {
                 event.preventDefault();
@@ -184,26 +188,25 @@
             };
 
             function sendData() {
-                button.disabled = true;
+                disableButton();
 
                 var xhr = new XMLHttpRequest();
                 var fd = new FormData(form);
 
-
                 xhr.onload = function(event) {
                     if(xhr.status == 200) {
-                        onLoad();
+                        onSuccess();
                     } else {
                         onError();
                     }
 
-                    button.disabled = false;
+                    enableButton();
                 };
 
                 xhr.onerror = function(event) {
                     onError();
 
-                    button.disabled = false;
+                    enableButton();
                 };
 
                 xhr.open(form.method, form.action);
@@ -211,12 +214,36 @@
                 xhr.send(serialize(form));
             }
 
-            function onLoad() {
-                alert("Success!");
+            function onSuccess() {
+                log.classList.remove("hidden");
+                log.classList.remove("error");
+                log.classList.add("success");
+                
+                clearTimeout(timeout);
+                timeout = setTimeout(function() { log.classList.add("hidden"); }, 7000);
+                
+                log.innerHTML = "<i class='fa fa-check-circle' aria-hidden='true'></i> <strong>Thanks for your comment!</strong> It will show on the site in a few seconds."
             }
 
             function onError() {
-                alert("Snap!");
+                log.classList.remove("hidden");
+                log.classList.remove("success");
+                log.classList.add("error");
+                
+                clearTimeout(timeout);
+                timeout = setTimeout(function() { log.classList.add("hidden"); }, 7000);
+                
+                log.innerHTML = "<i class='fa fa-exclamation-circle' aria-hidden='true'></i> <strong>Sorry, there was an error with your submission.</strong> Please make sure all required fields have been completed and try again."
+            }
+            
+            function enableButton() {
+                button.innerHTML = buttonContent;
+                button.disabled = false;
+            }
+            
+            function disableButton() {
+                button.innerHTML = "<div class='loader'></div>";
+                button.disabled = true;
             }
         })();
     </script>

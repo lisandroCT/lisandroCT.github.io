@@ -43,6 +43,10 @@ layout: blog
             </label>
         </fieldset>
         
+        <div id="comment-log" class="log hidden">
+            
+        </div>
+        
         <fieldset>
             <button id="comment-form-submit" type="submit" class="pure-button pure-button-primary">Send comment</button>
         </fieldset>
