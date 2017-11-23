@@ -28,14 +28,15 @@ layout: blog
                 {% assign message = parent.message %}
                 {% assign name = parent.name %}
                 {% assign email = parent.email %}
+                {% assign website = parent.website %}
                 {% assign date = parent.date %}
 
-                {% include comment.md id=id message=message name=name email=email date=date %}
+                {% include comment.md id=id message=message name=name email=email website=website date=date %}
             {% endfor %}
             <div style="height: 2em;"></div>
         {% endunless %}
     {% endunless %}
     
-    <h1 id="comment">Leave a comment <span id="replying-label" class="hidden" style="float: right">Replying <a href="#comment" onclick="cancelReply()"><i class="fa fa-times" aria-hidden="true"></i></a><span></h1>
+    <h1 id="comment">Leave a comment <a href="#comment" onclick="cancelReply()"><span id="replying-label" class="hidden" style="float: right">Replying <i class="fa fa-times" aria-hidden="true"></i><span></a></h1>
     {% include comment-form.md %}
 </div>

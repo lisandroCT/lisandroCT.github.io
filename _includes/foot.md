@@ -231,6 +231,9 @@
             }
 
             function onSuccess() {
+                grecaptcha.reset();
+                form.reset();
+                
                 log.classList.remove("hidden");
                 log.classList.remove("error");
                 log.classList.add("success");
@@ -242,6 +245,8 @@
             }
 
             function onError() {
+                grecaptcha.reset();
+                            
                 log.classList.remove("hidden");
                 log.classList.remove("success");
                 log.classList.add("error");

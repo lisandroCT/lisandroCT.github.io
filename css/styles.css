@@ -369,11 +369,11 @@ img {
 
 .blog-content {
     border-radius: 0.1em;
-    box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.3);
     background: #f0f0fa;
     width: 100%;
     padding: 1em;
     margin-bottom: 2em;
+    border-bottom: 0.2em solid #9f9fad;
 }
 
 .blog-content > h1 {
@@ -403,13 +403,13 @@ img {
     margin: 0;
     margin-bottom: 1em;
     font-size: 75%;
-    color: #6c7593;
     text-align: left;
     line-height: 2;
 }
 
 .details span {
     white-space: nowrap;
+    color: #6c7593;
 }
 
 .details .time {
@@ -427,11 +427,6 @@ img {
     padding-left: 0.6em;
     padding-right: 0.6em;
     border-radius: 0.3em;
-}
-
-.details .reply {
-    float: right;
-    margin-right: 1em;
 }
 
 .cover {
@@ -605,6 +600,20 @@ img {
     height: 4em;
 }
 
+.comment .reply {
+    position: absolute;
+    padding: 0.3em;
+    border-radius: 50%;
+    background: #ffffff;
+    width: 1.8em;
+    height: 1.8em;
+    text-align: center;
+    vertical-align: middle;
+    top: 0.2em;
+    left: 2.7em;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
 .comment .comment-content {
     border-radius: 0.2em;
     background: #ffffff;
@@ -770,11 +779,16 @@ img {
     }
 
     .comment-form .name-input {
-        padding-right: 0.5em;
+        padding-right: 0.7em;
     }
 
     .comment-form .email-input {
-        padding-left: 0.5em;
+        padding-left: 0.3em;
+        padding-right: 0.3em;
+    }
+
+    .comment-form .website-input {
+        padding-left: 0.7em;
     }
 }
 

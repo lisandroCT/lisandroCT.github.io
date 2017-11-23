@@ -10,19 +10,24 @@
         <textarea id="comment-form-message" name="fields[message]" class="pure-input-1 message-textarea" required></textarea>
 
         <div class="pure-g">
-            <div class="pure-u-1 pure-u-lg-9-24 name-input">
+            <div class="pure-u-1 pure-u-lg-8-24 name-input">
                 <label for="comment-form-name">Name or nickname</label>
                 <input id="comment-form-name" name="fields[name]" type="text" class="pure-input-1" required>
             </div>
 
-            <div class="pure-u-1 pure-u-lg-15-24 email-input">
-                <label for="comment-form-email">Email <small>(used for <a href="http://gravatar.com">Gravatar</a> image and reply notifications, will not be public)</small></label>
-                <input id="comment-form-email" name="fields[email]" type="email" class="pure-input-1" required>
+            <div class="pure-u-1 pure-u-lg-8-24 email-input">
+                <label for="comment-form-email">Email <small>(optional, used for <a href="http://gravatar.com">Gravatar</a>, it's not stored)</small></label>
+                <input id="comment-form-email" name="fields[email]" type="email" class="pure-input-1">
+            </div>
+
+            <div class="pure-u-1 pure-u-lg-8-24 website-input">
+                <label for="comment-form-website">Website <small>(optional)</small></label>
+                <input id="comment-form-website" name="fields[website]" type="url" class="pure-input-1">
             </div>
         </div>
     </fieldset>
 
-    <fieldset>
+    <fieldset class="hidden">
         <label for="terms" class="pure-checkbox">
             <input id="comment-form-subscribe" name="field[subscribe]" type="checkbox"> Notify me of replies by email.
         </label>

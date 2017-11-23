@@ -1,6 +1,6 @@
 comments: 
-  allowedFields: ["name", "email", "message", "parent"]
-  requiredFields: ["name", "email", "message"]
+  allowedFields: ["message", "name", "email", "website", "parent"]
+  requiredFields: ["message", "name"]
   
   format: "yaml"
     
