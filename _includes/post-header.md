@@ -8,6 +8,12 @@
 <p class="details">
     <span class="time"><i class="fa fa-clock-o" aria-hidden="true"></i> {{include.post.date | date: "%I:%M %p" }}</span>
     <span class="date"><i class="fa fa-calendar" aria-hidden="true"></i> {{include.post.date | date_to_long_string }}</span>
+    
+    {% assign comments = site.data.comments[include.post.slug] %}
+    {% unless comments == null or comments.size == 0 %}
+        <span class="comments-count"><i class="fa fa-comments" aria-hidden="true"></i> {{comments.size}} comments</span>
+    {% endunless %}
+    
     {% assign tags = site.blog-tags %}
     {% unless tags.size == 0 %}
         {% for tag in tags %}
