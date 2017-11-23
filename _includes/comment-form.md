@@ -16,7 +16,7 @@
             </div>
 
             <div class="pure-u-1 pure-u-lg-8-24 email-input">
-                <label for="comment-form-email">Email <small>(optional, used for <a href="http://gravatar.com">Gravatar</a>, it's not stored)</small></label>
+                <label for="comment-form-email">Email* <small>(optional, it's not stored)</small></label>
                 <input id="comment-form-email" name="fields[email]" type="email" class="pure-input-1">
             </div>
 
@@ -43,5 +43,9 @@
 
     <fieldset>
         <button id="comment-form-submit" type="submit" class="pure-button pure-button-primary">Send comment</button>
+    </fieldset>
+    
+    <fieldset>
+        <p>* A hash is used for <a href="http://gravatar.com">Gravatar</a> image. The address is not stored in any way.</p>
     </fieldset>
 </form>
