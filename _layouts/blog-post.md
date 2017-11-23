@@ -18,19 +18,22 @@ layout: blog
 </div>
 
 <div class="blog-content">
-    {% assign comments = site.data.comments[page.slug] | where: "parent", "" %}
-    {% unless comments.size == 0 %}
-        <h1>Comments</h1>
-        {% for comment in comments %}
-            {% assign id = comment._id %}
-            {% assign message = comment.message %}
-            {% assign name = comment.name %}
-            {% assign email = comment.email %}
-            {% assign date = comment.date %}
-    
-            {% include comment.md id=id message=message name=name email=email date=date %}
-        {% endfor %}
-        <div style="height: 2em;"></div>
+    {% assign comments = site.data.comments[page.slug] %}
+    {% unless comments == null %}
+        {% unless comments.size == 0 %}
+            {% assign parents = allComments | where: "parent", "" | sort:"date" %}
+            <h1>Comments</h1>
+            {% for parent in parents %}
+                {% assign id = parent._id %}
+                {% assign message = parent.message %}
+                {% assign name = parent.name %}
+                {% assign email = parent.email %}
+                {% assign date = parent.date %}
+
+                {% include comment.md id=id message=message name=name email=email date=date %}
+            {% endfor %}
+            <div style="height: 2em;"></div>
+        {% endunless %}
     {% endunless %}
     
     <h1 id="comment">Leave a comment <span id="replying-label" class="hidden" style="float: right">Replying <a href="#comment" onclick="cancelReply()"><i class="fa fa-times" aria-hidden="true"></i></a><span></h1>
