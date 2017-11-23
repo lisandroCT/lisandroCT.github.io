@@ -18,7 +18,7 @@ layout: blog
 </div>
 
 <div class="blog-content">
-    {% assign comments = site.data.comments[page.slug] | where: "parent", "" | sort:"date" %}
+    {% assign comments = site.data.comments[page.slug] | where: "parent", "" %}
     {% unless comments.size == 0 %}
         <h1>Comments</h1>
         {% for comment in comments %}
