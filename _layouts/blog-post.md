@@ -20,8 +20,8 @@ layout: blog
 <div class="blog-content">
     {% assign comments = site.data.comments[page.slug] %}
     {% unless comments == null %}
-        {% unless comments.size == 0 %}
-            {% assign parents = allComments | where: "parent", "" | sort:"date" %}
+        {% assign parents = site.data.comments[page.slug] | where: "parent", "" | sort:"date" %}
+        {% unless parents.size == 0 %}
             <h1>Comments</h1>
             {% for parent in parents %}
                 {% assign id = parent._id %}
