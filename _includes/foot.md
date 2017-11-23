@@ -239,7 +239,7 @@
                 log.classList.add("success");
                 
                 clearTimeout(timeout);
-                timeout = setTimeout(function() { log.classList.add("hidden"); location.reload(true); }, 7000);
+                timeout = setTimeout(function() { log.classList.add("hidden"); location.reload(true); }, 10000);
                 
                 log.innerHTML = "<i class='fa fa-check-circle' aria-hidden='true'></i> <strong>Thanks for your comment!</strong> It will show on the site in a few seconds."
             }
