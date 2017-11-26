@@ -8,15 +8,12 @@ snippet: |-
 tags:
   - personal
 featured: false
-published: true
-layout: blog-post
-category: blog
 ---
 Hi! I'm Lisandro Crespo, a game programmer from Rosario, Argentina. I'm really passionate about rendering and graphics technologies, computer sciences, software architecture and clean code.
 
 Welcome to my blog!
 
-<!--more-->
+<!-- more -->
 
 This will be my playground to document and share my last experiments, what I learn, my thoughts and projects, snippets of code (and Gists?) and some helpful time-saving tips.
 

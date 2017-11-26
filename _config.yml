@@ -13,8 +13,24 @@ defaults:
     values: 
       color: "108, 117, 147"
       layout: blog-tag
+  - scope: 
+      path: "_posts/blog"
+    values: 
+      category: blog
+      layout: blog-post
+      published: true
+  - scope: 
+      path: "_posts/portfolio"
+    values: 
+      category: portfolio
+      published: true
+  - scope: 
+      path: "_posts/projects"
+    values: 
+      category: projects
+      published: true
 
-excerpt_separator: "<!--more-->"
+excerpt_separator: "<!-- more -->"
 
 exclude: 
   - README.md

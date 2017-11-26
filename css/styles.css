@@ -539,11 +539,65 @@ img {
 }
 
 /*
- * -- COMMENT FORM STYLES --
+ * -- USER CONTENT STYLES --
  */
-.post-frame .user-content {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+.user-content h2 {
+    margin: 0;
+    padding: 0;
+    margin-top: 1.2em;
+    margin-bottom: 0.2em;
+    font-size: 160%;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    color: #813136;
+}
+
+.user-content h3 {
+    margin: 0;
+    padding: 0;
+    margin-top: 1em;
+    margin-bottom: 0.2em;
+    font-size: 150%;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    color: #813136;
+}
+
+.user-content h4 {
+    margin: 0;
+    padding: 0;
+    margin-top: 0.8em;
+    margin-bottom: 0.2em;
+    font-size: 140%;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    color: #813136;
+}
+
+.user-content h5 {
+    margin: 0;
+    padding: 0;
+    margin-top: 0.6em;
+    margin-bottom: 0.1em;
+    font-size: 130%;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    color: #813136;
+}
+
+.user-content h6 {
+    margin: 0;
+    padding: 0;
+    margin-top: 0.4em;
+    margin-bottom: 0.1em;
+    font-size: 120%;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    color: #813136;
+}
+
+.user-content a {
+    font-weight: 700;
 }
 
 .user-content p {
@@ -553,6 +607,41 @@ img {
     font-weight: 300;
     text-align: justify;
     line-height: 1.3;
+}
+
+.user-content blockquote {
+    padding: 0.5em;
+    padding-left: 2em;
+    padding-right: 1em;
+    margin: 1;
+    margin-left: 1.5em;
+    margin-right: 1em;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 1.3;
+    font-style: italic;
+    background: #e2e3e9;
+    border-left: 0.2em solid #813136;
+}
+
+.user-content hr {
+    border: 0;
+    height: 0.1em;
+    background: #d2d4de;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+}
+
+.user-content img {
+    max-width: 100%;
+}
+
+/*
+ * -- COMMENT FORM STYLES --
+ */
+.post-frame .user-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 
 /*

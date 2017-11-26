@@ -4,7 +4,7 @@ layout: home
 
 
 <div class="presentation">
-    <img class="profile-picture" src="{{site.baseurl}}/img/profile-1.jpg">
+    <img class="profile-picture" src="{{site.baseurl}}/assets/profile.jpg">
     <p>
         Hey, I’m an independent game programmer from Rosario, Argentina. I <i class="fa fa-heart" aria-hidden="true" style="color: #8a4247; font-size: 85%;"></i> graphics technologies, rendering and game engines. I'm crazy about software architecture and clean code.
     </p>
