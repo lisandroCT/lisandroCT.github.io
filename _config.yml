@@ -36,3 +36,6 @@ exclude:
   - README.md
 
 staticman_url: https://api.staticman.net/v2/entry/lisandroct/lisandroct.github.io/master/comments
+
+plugins:
+  - jemoji
