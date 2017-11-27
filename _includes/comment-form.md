@@ -6,7 +6,7 @@
     <input id="comment-form-parent" name="fields[parent]" value="" type="hidden">
 
     <fieldset>            
-        <label for="comment-form-message">Message <small>(<a href="{{site.baseurl}}/blog/markup">Markup</a> is allowed)</small></label>
+        <label for="comment-form-message">Message <small>(<a href="{{site.baseurl}}/blog/markdown-cheatsheet">Markdown</a> and <a href="{{site.baseurl}}/blog/emojis-cheatsheet">emojis</a> are allowed)</small></label>
         <textarea id="comment-form-message" name="fields[message]" class="pure-input-1 message-textarea" required></textarea>
 
         <div class="pure-g">

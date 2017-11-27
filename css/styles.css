@@ -613,9 +613,9 @@ img {
     padding: 0.5em;
     padding-left: 2em;
     padding-right: 1em;
-    margin: 1;
-    margin-left: 1.5em;
-    margin-right: 1em;
+    margin: 1em;
+    margin-left: 2em;
+    margin-right: 1.5em;
     font-weight: 300;
     text-align: justify;
     line-height: 1.3;
@@ -634,6 +634,12 @@ img {
 
 .user-content img {
     max-width: 100%;
+}
+
+.user-content figure.highlight, .user-content div.highlight {
+    margin: 1em;
+    margin-left: 2em;
+    margin-right: 1.5em;
 }
 
 /*
