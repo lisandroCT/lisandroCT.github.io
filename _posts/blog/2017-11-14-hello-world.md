@@ -1,10 +1,6 @@
 ---
 title: 'Hello, world'
 date: '2017-11-14 09:54:28 -0300'
-snippet: |-
-  fun greet() {
-      println("Hello, world")
-  }
 tags:
   - c#
 featured: false
