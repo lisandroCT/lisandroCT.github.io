@@ -11,7 +11,9 @@ defaults:
       path: ""
       type: blog-tags
     values: 
-      color: "108, 117, 147"
+      red: 108
+      green: 117
+      blue: 147
       layout: blog-tag
   - scope: 
       path: "_posts/blog"

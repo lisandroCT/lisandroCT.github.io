@@ -1,4 +1,6 @@
 ---
 tag: "c#"
-color: "0, 120, 0"
+red: 83
+green: 185
+blue: 91
 ---

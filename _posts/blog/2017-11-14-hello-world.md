@@ -6,7 +6,7 @@ snippet: |-
       println("Hello, world")
   }
 tags:
-  - personal
+  - c#
 featured: false
 ---
 Hi! I'm Lisandro Crespo, a game programmer from Rosario, Argentina. I'm really passionate about rendering and graphics technologies, computer sciences, software architecture and clean code.

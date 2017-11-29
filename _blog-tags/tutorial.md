@@ -1,4 +1,6 @@
 ---
 tag: "tutorial"
-color: "120, 0, 0"
+red: 0
+green: 195
+blue: 221
 ---
