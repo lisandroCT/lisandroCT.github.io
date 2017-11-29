@@ -486,7 +486,7 @@ img {
 }
 
 .post-frame p:last-child {
-  margin-bottom: 0;
+  margin-bottom: 1em;
 }
 
 .post-frame .div {
