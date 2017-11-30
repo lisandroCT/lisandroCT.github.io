@@ -1,6 +1,6 @@
 ---
-tag: "architecture"
+display: "Architecture"
 red: 255
-green: 165
-blue: 87
+green: 187
+blue: 67
 ---

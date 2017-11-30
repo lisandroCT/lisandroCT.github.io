@@ -1,3 +1,3 @@
 ---
-tag: "personal"
+display: "Personal"
 ---

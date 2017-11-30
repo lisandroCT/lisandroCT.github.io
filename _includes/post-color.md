@@ -1,15 +1,14 @@
 {% assign post = include.post %}
 
-{% assign siteTags = site.blog-tags %}
 {% assign tagsCount = 0 %}
 {% assign red = 0 %}
 {% assign green = 0 %}
 {% assign blue = 0 %}
 
-{% unless siteTags == null %}
-    {% unless siteTags.size == 0 %}
-        {% for tag in siteTags %}
-            {% if post.tags contains tag.tag %}
+{% unless site.blog-tags == null %}
+    {% unless site.blog-tags.size == 0 %}
+        {% for tag in site.blog-tags %}
+            {% if post.tags contains tag.slug %}
                 {% assign tagsCount = tagsCount | plus: 1 %}
 
                 {% assign red = red | plus: tag.red %}

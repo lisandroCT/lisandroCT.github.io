@@ -1,6 +1,6 @@
 ---
-tag: "clean code"
-red: 249
-green: 86
-blue: 75
+display: "Clean Code"
+red: 49
+green: 89
+blue: 175
 ---

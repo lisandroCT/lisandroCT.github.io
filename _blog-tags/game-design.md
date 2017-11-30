@@ -1,6 +1,6 @@
 ---
-tag: "game designs"
-red: 250
-green: 208
-blue: 61    
+display: "Game Design"
+red: 0
+green: 126
+blue: 74
 ---

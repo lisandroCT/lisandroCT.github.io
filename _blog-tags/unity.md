@@ -1,6 +1,6 @@
 ---
-tag: "unity"
-red: 78
-green: 78
-blue: 78
+display: "Unity"
+red: 50
+green: 50
+blue: 50
 ---

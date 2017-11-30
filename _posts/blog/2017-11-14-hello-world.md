@@ -2,7 +2,7 @@
 title: 'Hello, world'
 date: '2017-11-14 09:54:28 -0300'
 tags:
-  - c#
+  - personal
 featured: false
 ---
 Hi! I'm Lisandro Crespo, a game programmer from Rosario, Argentina. I'm really passionate about rendering and graphics technologies, computer sciences, software architecture and clean code.

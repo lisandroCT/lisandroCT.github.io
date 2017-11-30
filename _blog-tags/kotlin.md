@@ -1,6 +1,6 @@
 ---
-tag: "kotlin"
-red: 0
-green: 125
-blue: 186
+display: "Kotlin"
+red: 73
+green: 123
+blue: 183
 ---

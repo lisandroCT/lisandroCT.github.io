@@ -33,16 +33,15 @@
             {% endunless %}
             
             {% unless site.blog-tags == null %}
-                {% assign tags = site.blog-tags %}
-                {% unless tags.size == 0 %}
+                {% unless site.blog-tags.size == 0 %}
                     <div class="blog-content">
                         <h1>Tags</h1>
                         <ul class="tags-list">
-                            {% for tag in tags %}
-                                {% assign posts = site.posts | where: 'tags', tag.tag %}
+                            {% for tag in site.blog-tags %}
+                                {% assign posts = site.posts | where: 'tags', tag.slug %}
                                 {% unless posts.size == 0 %}
                                     <li><a href="{{site.baseurl}}{{tag.url}}">
-                                        {{tag.tag | capitalize}}
+                                        {{tag.display}}
                                     </a></li>
                                 {% endunless %}
                             {% endfor %}
