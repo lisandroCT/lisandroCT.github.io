@@ -1,5 +1,5 @@
 <div id={{include.id}} class="comment">
-    {% unless include.website == null or include.website == "" %}<a href="{{include.website}}">{% endunless %}<img class="avatar" src="https://www.gravatar.com/avatar/{{include.email}}"/>{% unless include.website == null or include.website == "" %}</a>{% endunless %}
+    <img class="avatar" src="https://www.gravatar.com/avatar/{{include.email}}"/>
     <a href="#comment" onclick="reply('{{include.id}}')"><span class="reply"><i class="fa fa-reply" aria-hidden="true"></i></span></a>
     <div class="comment-content">
         <div class="user-content">{{include.message | markdownify}}</div>
