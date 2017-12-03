@@ -53,7 +53,7 @@
     </div>
 </div>
 
-<div class="blog-social">
+<div id="blog-social" class="blog-social">
     {% include social.md %}
 </div>
     
