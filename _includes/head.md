@@ -27,20 +27,22 @@
 </head>
     
 <body>
+    
+<div class="header" id="header">
+    <i class="fa fa-bars bars" aria-hidden="true" onclick="openNav()"></i>
+    <nav>
+        <a class="logo" href="{{site.baseurl}}/#"><span>L</span>isandro <span>C</span>respo</a>
+ 
+        <div class="navigation">
+            {% include navigation.md %}
+        </div>
+    </nav>
+</div>
+ 
 <nav>
     <div class="nav side-navigation" id="navbar">
         {% include navigation.md %}
     </div>
 </nav>
     
-<div id="page" class="page">
-    <div class="header" id="header">
-        <i class="fa fa-bars bars" aria-hidden="true" onclick="toggleNav()"></i>
-        <nav>
-            <a class="logo" href="{{site.baseurl}}/#"><span>L</span>isandro <span>C</span>respo</a>
-
-            <div class="navigation">
-                {% include navigation.md %}
-            </div>
-        </nav>
-    </div>
+<div class="shadow" id="shadow" onclick="closeNav()"></div>

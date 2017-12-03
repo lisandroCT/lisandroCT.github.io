@@ -1,4 +1,4 @@
-<div id="splash-container" class="splash-container">
+<div class="splash-container">
     <div class="splash">
         
         {{content}}

@@ -1,4 +1,3 @@
-</div>
 <script type="text/javascript" src="{{site.baseurl}}/js/smooth-scroll.min.js"></script>
 <script type="text/javascript">
     (function() {
@@ -248,6 +247,8 @@
             }
 
             function onSuccess() {
+                cancelReply();
+            
                 grecaptcha.reset();
                 form.reset();
                 
@@ -287,45 +288,19 @@
     </script>
 {% endif %}
 <script type="text/javascript">
-    var open = false;
-    var page = document.getElementById("page");
-    var splashContainer = document.getElementById("splash-container");
-    var blogSocial = document.getElementById("blog-social");
-    
-    function toggleNav() {
-        if(open) {
-            closeNav();
-        } else {
-            openNav();
-        }
-    }
+    var navbar = document.getElementById("navbar");
+    var shadow = document.getElementById("shadow");
  
     function openNav() {
-        if(page != null) {
-            page.style.left = "12em";
-        }
-        if(splashContainer != null) {
-            splashContainer.style.left = "12em";
-        }
-        if(blogSocial != null) {
-            blogSocial.style.left = "12em";
-        }
-        
-        open = true;
+        navbar.style.left = "0";
+        shadow.style.display = "inline";
+        shadow.style.visibility = "visible";
     }
  
     function closeNav() {
-        if(page != null) {
-            page.style.left = "0";
-        }
-        if(splashContainer != null) {
-            splashContainer.style.left = "0";
-        }
-        if(blogSocial != null) {
-            blogSocial.style.left = "0";
-        }
-        
-        open = false;
+        navbar.style.left = "-10em";
+        shadow.style.display = "none";
+        shadow.style.visibility = "hidden";
     }
 </script>
 </body>
