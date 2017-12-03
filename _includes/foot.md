@@ -247,6 +247,8 @@
             }
 
             function onSuccess() {
+                cancelReply();
+            
                 grecaptcha.reset();
                 form.reset();
                 
