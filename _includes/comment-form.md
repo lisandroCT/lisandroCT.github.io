@@ -4,6 +4,7 @@
     <input name="options[slug]" type="hidden" value="{{page.slug}}">
     
     <input id="comment-form-parent" name="fields[parent]" value="" type="hidden">
+    <input id="comment-form-quoted" name="fields[quoted]" value="" type="hidden">
 
     <fieldset>            
         <label for="comment-form-message">Message <small>(<a href="{{site.baseurl}}/blog/markdown-cheatsheet">Markdown</a> and <a href="{{site.baseurl}}/blog/emojis-cheatsheet">emojis</a> are allowed)</small></label>

@@ -14,6 +14,15 @@
     {% for comment in comments %}
         <div class="comment">
             <img class="avatar" src="https://www.gravatar.com/avatar/{{comment.email}}"/>
+            <a href="#comment" onclick="reply('{{include.id}}', '{{comment.id}}')"><span class="reply"><i class="fa fa-reply" aria-hidden="true"></i></span></a>
+            {% if comment.quoted %}
+            <div class="comment-quote">
+                {% assign quoted = site.data.comments[page.slug] | where: "id", {{comment.quoted}} %}
+                {% unless quoted == null %}
+                    <div class="user-content">{{quoted.message | markdownify}}</div>
+                {% endunless %}
+            </div>
+            {% endif %}
             <div class="comment-content">
                 <div class="user-content">{{comment.message | markdownify}}</div>
             </div>

@@ -173,9 +173,19 @@
         };
     </script>
     <script type="text/javascript">
-        function reply(id) {
+        function reply(parentId) {
             var parent = document.getElementById("comment-form-parent");
-            parent.value = id;
+            parent.value = parentId;
+            
+            var label = document.getElementById("replying-label");
+            label.classList.remove("hidden");
+        }
+        
+        function reply(parentId, quotedId) {
+            var parent = document.getElementById("comment-form-parent");
+            parent.value = parentId;
+            var quoted = document.getElementById("comment-form-quoted");
+            quoted.value = quotedId;
             
             var label = document.getElementById("replying-label");
             label.classList.remove("hidden");
@@ -184,6 +194,8 @@
         function cancelReply() {
             var parent = document.getElementById("comment-form-parent");
             parent.value = "";
+            var quoted = document.getElementById("comment-form-quoted");
+            quoted.value = "";
             
             var label = document.getElementById("replying-label");
             label.classList.add("hidden");
