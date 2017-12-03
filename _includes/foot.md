@@ -174,6 +174,8 @@
     </script>
     <script type="text/javascript">
         function reply(parentId) {
+            cancelReply();
+            
             var parent = document.getElementById("comment-form-parent");
             parent.value = parentId;
             
@@ -182,10 +184,12 @@
         }
         
         function reply(parentId, quotedId) {
+            cancelReply();
+            
             var parent = document.getElementById("comment-form-parent");
             parent.value = parentId;
-            var quoted = document.getElementById("comment-form-quoted");
-            quoted.value = quotedId;
+            var quote = document.getElementById("comment-form-quote");
+            quote.value = quotedId;
             
             var label = document.getElementById("replying-label");
             label.classList.remove("hidden");
@@ -194,8 +198,8 @@
         function cancelReply() {
             var parent = document.getElementById("comment-form-parent");
             parent.value = "";
-            var quoted = document.getElementById("comment-form-quoted");
-            quoted.value = "";
+            var quote = document.getElementById("comment-form-quote");
+            quote.value = "";
             
             var label = document.getElementById("replying-label");
             label.classList.add("hidden");

@@ -1,5 +1,5 @@
-<div class="comment">
-    <img class="avatar" src="https://www.gravatar.com/avatar/{{include.email}}"/>
+<div id={{include.id}} class="comment">
+    {% unless include.website == null or include.website == "" %}<a href="{{include.website}}">{% endunless %}<img class="avatar" src="https://www.gravatar.com/avatar/{{include.email}}"/>{% unless include.website == null or include.website == "" %}</a>{% endunless %}
     <a href="#comment" onclick="reply('{{include.id}}')"><span class="reply"><i class="fa fa-reply" aria-hidden="true"></i></span></a>
     <div class="comment-content">
         <div class="user-content">{{include.message | markdownify}}</div>
@@ -12,18 +12,27 @@
     
     {% assign comments = site.data.comments[page.slug] | where: "parent", {{include.id}} | sort:"date" %}
     {% for comment in comments %}
-        <div class="comment">
+        <div id={{comment._id}} class="comment">
             <img class="avatar" src="https://www.gravatar.com/avatar/{{comment.email}}"/>
-            <a href="#comment" onclick="reply('{{include.id}}', '{{comment.id}}')"><span class="reply"><i class="fa fa-reply" aria-hidden="true"></i></span></a>
-            {% if comment.quoted %}
-            <div class="comment-quote">
-                {% assign quoted = site.data.comments[page.slug] | where: "id", {{comment.quoted}} %}
-                {% unless quoted == null %}
-                    <div class="user-content">{{quoted.message | markdownify}}</div>
-                {% endunless %}
-            </div>
-            {% endif %}
+            <a href="#comment" onclick="reply('{{include.id}}', '{{comment._id}}')"><span class="reply"><i class="fa fa-reply" aria-hidden="true"></i></span></a>
             <div class="comment-content">
+                {% unless comment.quote == null %}
+                    {% unless comment.quote == "" %}
+                        {% assign quotes = site.data.comments[page.slug] | where: "_id", {{comment.quote}} %}
+                        {% unless quotes == null %}
+                            {% assign quote = quotes | first %}
+                            <a href="#{{quote._id}}">
+                                <div class="comment-quote">
+                                    <div class="user-content">{{quote.message | markdownify}}</div>
+                                    <p class="details">
+                                        <span class="author"><i class="fa fa-pencil" aria-hidden="true"></i> {{quote.name}}</span>
+                                    </p>
+                                </div>
+                            </a>
+                        {% endunless %}
+                    {% endunless %}
+                {% endunless %}
+                
                 <div class="user-content">{{comment.message | markdownify}}</div>
             </div>
             <p class="details">

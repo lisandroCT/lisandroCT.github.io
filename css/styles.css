@@ -706,6 +706,18 @@ img {
     color: #813136;
 }
 
+.comment .comment-content .comment-quote {
+    padding: 0.5em;
+    margin: 0.5em;
+    background: #e2e3e9;
+    color: #292C37;
+    border-radius: 0.2em;
+}
+
+.comment-quote .details {
+    margin-bottom: 0;
+}
+
 /*
  * -- LOADER STYLES --
  */
