@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Lisandro Crespo - Hire Me
+title: Looking for a developer?
+description: I'm a skilled frontend game developer. I specialize in software architecture and tools development.
 permalink: /hire-me
 ---
 

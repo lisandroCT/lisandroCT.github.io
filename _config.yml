@@ -1,6 +1,24 @@
 url: "http://lisandroct.com"
 baseurl: ""
 
+title: "Lisandro Crespo"
+description: "Independent game programmer from Argentina."
+keywords:
+  - "game programmer"
+  - "development"
+  - "argentina"
+  - "independent"
+  - "indie"
+  - "rosario"
+  
+social:
+  email: "hey@lisandroct.com"
+  github: "https://github.com/lisandroct"
+  linkedin: "https://linkedin.com/in/lisandroct"
+  twitter: "https://twitter.com/lisandroct"
+  instagram: "https://instagram.com/lisandroct"
+  skype: "lisandroct"
+
 collections: 
   blog-tags: 
     output: true

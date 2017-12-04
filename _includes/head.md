@@ -3,8 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Independent game programmer from Argentina.">
-    <title>{{site.title}}</title>
+    <title>{% if page.title %}{{page.title}} | {% endif %}{{site.title}}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{% if page.excerpt %}{{ page.excerpt | strip_html | strip | strip_newlines }}{% else %}{{site.description}}{% endif %}{% endif %}">
+    <meta name="keywords" content="{% unless site.blog-tags == null %}{% unless site.blog-tags.size == 0 %}{% for tag in site.blog-tags %}{% if page.tags contains tag.slug %}{{tag.display | downcase}}, {% endif %}{% endfor %}{% endunless %}{% endunless %}{% if page.url contains "blog" %}blog, {% endif %}{% for keyword in site.keywords %}{{keyword | downcase}}{% unless forloop.last %}, {% endunless} %}{% endfor %}">
+    <meta name="author" content="Lisandro Crespo">
     
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
