@@ -17,7 +17,7 @@ published: true
         I'm a skilled frontend game developer. I specialize in software architecture and tools development.
     </p>
     <p>
-        I was the lead programmer of Sweet Meat, which was featured by Google and nominated for Best Latin American Game in the <a href="bigfestival.com.br">BIG Festival</a>. I've developed games for important international brands, such as Mattel and Coca-Cola, among others.
+        I was the lead programmer of Sweet Meat, which was featured by Google and nominated for Best Latin American Game in the <a href="http://bigfestival.com.br">BIG Festival</a>. I've developed games for important international brands, such as Mattel and Coca-Cola, among others.
     </p>
     <p>
         If you have a game or prototype you're interested in developing, I'd love to work with you on it. I work primarily with Unity targeting desktop and mobile but picking up new languages or engines isn’t a problem (in fact, I love it!).
