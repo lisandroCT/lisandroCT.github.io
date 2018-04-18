@@ -51,6 +51,10 @@ img {
     border-radius: 0.2em;
 }
 
+video {
+    border-radius: 0.2em;
+}
+
 
 .hidden {
     display: none;
