@@ -13,7 +13,14 @@
                     {% for work in sorted_portfolio %}
                         <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
                             <div class="frame">
-                                <img src="{{site.baseurl}}/assets/portfolio/{% if work.img %}{{work.img}}{% else %}placeholder.svg{% endif %}">
+                                <img
+                                    {% capture src %}{{site.baseurl}}/assets/portfolio/{% if work.img %}{{work.img}}{% else %}placeholder.svg{% endif %}{% endcapture %}
+                                    src="{{src}}"
+                                    {% if work.gif %}
+                                        onmouseover="this.src = '{{site.baseurl}}/assets/portfolio/{{work.gif}}'"
+                                        onmouseout="this.src = '{{src}}'"
+                                    {% endif %}
+                                >
 
                                 <h2>
                                     {{work.title}}
@@ -38,7 +45,14 @@
                     {% for project in sorted_projects %}
                         <div class="l-box pure-u-1 pure-u-lg-1-2">
                             <div class="frame">
-                                <img src="{{site.baseurl}}/assets/projects/{% if project.img %}{{project.img}}{% else %}placeholder.svg{% endif %}">
+                                <img
+                                    {% capture src %}{{site.baseurl}}/assets/projects/{% if project.img %}{{project.img}}{% else %}placeholder.svg{% endif %}{% endcapture %}
+                                    src="{{src}}"
+                                    {% if project.gif %}
+                                        onmouseover="this.src = '{{site.baseurl}}/assets/projects/{{project.gif}}'"
+                                        onmouseout="this.src = '{{src}}'"
+                                    {% endif %}
+                                >
 
                                 <h2>
                                     {{project.title}}

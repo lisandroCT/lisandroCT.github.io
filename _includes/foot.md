@@ -101,17 +101,17 @@
         })();
     </script>
     <script type="text/javascript">
-    (function() {
-        var frames = document.getElementsByClassName("frame");
+        (function() {
+            var frames = document.getElementsByClassName("frame");
 
-        for(var i = 0, n = frames.length; i < n; i++) {
-            var degrees = Math.random() * 3 - 1.5;
+            for(var i = 0, n = frames.length; i < n; i++) {
+                var degrees = Math.random() * 3 - 1.5;
 
-            frames[i].setAttribute("style", "-ms-transform: rotate(" + degrees + "deg);");
-            frames[i].setAttribute("style", "-webkit-transform: rotate(" + degrees + "deg);");
-            frames[i].setAttribute("style", "transform: rotate(" + degrees + "deg);");
-        }
-    })();
+                frames[i].setAttribute("style", "-ms-transform: rotate(" + degrees + "deg);");
+                frames[i].setAttribute("style", "-webkit-transform: rotate(" + degrees + "deg);");
+                frames[i].setAttribute("style", "transform: rotate(" + degrees + "deg);");
+            }
+        })();
     </script>
 {% endif %}
 {% if page.layout == "blog-post" %}
