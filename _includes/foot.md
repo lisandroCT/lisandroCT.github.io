@@ -113,6 +113,34 @@
             }
         })();
     </script>
+    <script>
+        function showVideo(div) {
+            var video = div.getElementsByTagName('video')[0];
+            if(video == null) {
+                return;
+            }
+            
+            var img = div.getElementsByTagName('img')[0];
+            
+            video.play();
+            
+            img.style.display = "none";
+            video.style.display = "inline";
+        }
+        function showImg(div) {
+            var video = div.getElementsByTagName('video')[0];
+            if(video == null) {
+                return;
+            }
+            
+            var img = div.getElementsByTagName('img')[0];
+            
+            video.pause();
+            
+            img.style.display = "inline";
+            video.style.display = "none";
+        }
+    </script>
 {% endif %}
 {% if page.layout == "blog-post" %}
     <script type="text/javascript">

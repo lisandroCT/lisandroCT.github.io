@@ -13,17 +13,14 @@
                     {% for work in sorted_portfolio %}
                         <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
                             <div class="frame">
-                                <img
-                                    {% capture src %}{{site.baseurl}}/assets/portfolio/{% if work.img %}{{work.img}}{% else %}placeholder.svg{% endif %}{% endcapture %}
-                                    src="{{src}}"
-                                    {% if work.gif %}
-                                        onmouseover="this.src = '{{site.baseurl}}/assets/portfolio/{{work.gif}}'"
-                                        onmouseout="this.src = '{{src}}'"
+                                <div onmouseover="showVideo(this)" onmouseout="showImg(this)">
+                                    <img src="{{site.baseurl}}/assets/portfolio/{% if work.img %}{{work.img}}{% else %}placeholder.svg{% endif %}">
+                                    {% if work.video %}
+                                        <video style="display: none" width="100%" loop>
+                                            <source src="{{site.baseurl}}/assets/portfolio/{{work.video}}" type="video/mp4">
+                                        </video>
                                     {% endif %}
-                                >
-                                <video style="display: none" width="100%" loop>
-                                    <source src="{{site.baseurl}}/assets/portfolio/mov_bbb.mp4" type="video/mp4">
-                                </video>
+                                </div>
 
                                 <h2>
                                     {{work.title}}
