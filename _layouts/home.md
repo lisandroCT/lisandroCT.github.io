@@ -21,7 +21,7 @@
                                         onmouseout="this.src = '{{src}}'"
                                     {% endif %}
                                 >
-                                <video width="100%" autoplay loop>
+                                <video style="display: none" width="100%" autoplay loop>
                                     <source src="{{site.baseurl}}/assets/portfolio/mov_bbb.mp4" type="video/mp4">
                                 </video>
 
