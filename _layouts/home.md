@@ -45,14 +45,14 @@
                     {% for project in sorted_projects %}
                         <div class="l-box pure-u-1 pure-u-lg-1-2">
                             <div class="frame">
-                                <img
-                                    {% capture src %}{{site.baseurl}}/assets/projects/{% if project.img %}{{project.img}}{% else %}placeholder.svg{% endif %}{% endcapture %}
-                                    src="{{src}}"
-                                    {% if project.gif %}
-                                        onmouseover="this.src = '{{site.baseurl}}/assets/projects/{{project.gif}}'"
-                                        onmouseout="this.src = '{{src}}'"
+                                <div onmouseover="showVideo(this)" onmouseout="showImg(this)">
+                                    <img src="{{site.baseurl}}/assets/projects/{% if project.img %}{{project.img}}{% else %}placeholder.svg{% endif %}">
+                                    {% if project.video %}
+                                        <video style="display: none" width="100%" loop>
+                                            <source src="{{site.baseurl}}/assets/projects/{{project.video}}" type="video/mp4">
+                                        </video>
                                     {% endif %}
-                                >
+                                </div>
 
                                 <h2>
                                     {{project.title}}
