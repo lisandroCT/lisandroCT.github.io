@@ -123,7 +123,6 @@
             var img = div.getElementsByTagName('img')[0];
             
             video.play();
-            video.removeAttribute("controls");
             
             img.style.display = "none";
             video.style.display = "inline";
