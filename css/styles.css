@@ -328,6 +328,11 @@ video {
     height: auto;
 }
 
+.frame video {
+    display: none;
+    background-size: cover;
+}
+
 .frame h2 {
     font-size: 110%;
     margin: 0;

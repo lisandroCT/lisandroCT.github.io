@@ -14,9 +14,10 @@
                         <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
                             <div class="frame">
                                 <div onmouseover="showVideo(this)" onmouseout="showImg(this)">
-                                    <img src="{{site.baseurl}}/assets/portfolio/{% if work.img %}{{work.img}}{% else %}placeholder.svg{% endif %}">
+                                    {% capture img %}{{site.baseurl}}/assets/portfolio/{% if work.img %}{{work.img}}{% else %}placeholder.svg{% endif %}{% endcapture %}
+                                    <img src="{{img}}">
                                     {% if work.video %}
-                                        <video style="display: none" width="100%" loop>
+                                        <video loop preload="auto" width="100%" style="background-image: url({{img}})">
                                             <source src="{{site.baseurl}}/assets/portfolio/{{work.video}}" type="video/mp4">
                                         </video>
                                     {% endif %}
@@ -65,7 +66,7 @@
                                 <div onmouseover="showVideo(this)" onmouseout="showImg(this)">
                                     <img src="{{site.baseurl}}/assets/projects/{% if project.img %}{{project.img}}{% else %}placeholder.svg{% endif %}">
                                     {% if project.video %}
-                                        <video style="display: none" width="100%" loop>
+                                        <video loop preload="auto" width="100%"">
                                             <source src="{{site.baseurl}}/assets/projects/{{project.video}}" type="video/mp4">
                                         </video>
                                     {% endif %}
