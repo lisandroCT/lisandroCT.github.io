@@ -1,6 +1,7 @@
 ---
 title: Sweet Meat
 img: sweet-meat.jpg
+video: sweet-meat.mp4
 play-store: com.oneeyeant.sweetmeat
 app-store: 1140314217
 youtube: RniB1kqB06g
