@@ -122,6 +122,7 @@
             
             var img = div.getElementsByTagName('img')[0];
             
+            video.load();
             video.play();
             
             img.style.display = "none";
