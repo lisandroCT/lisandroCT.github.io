@@ -122,8 +122,8 @@
             
             var img = div.getElementsByTagName('img')[0];
             
-            video.removeAttribute("controls");
             video.play();
+            video.removeAttribute("controls");
             
             img.style.display = "none";
             video.style.display = "inline";
