@@ -14,12 +14,16 @@
                         <div class="l-box pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
                             <div class="frame">
                                 <div {% if work.webm or work.mp4 %}onmouseover="showVideo(this)" onmouseout="showImg(this)"{% endif %}>
+                                    <h2 class="title">
+                                        {{work.title}}
+                                    </h2>
+                                    
                                     {% capture base %}{{site.baseurl}}/assets/portfolio{% endcapture %}
                                     {% capture img %}{{base}}/{% if work.img %}{{work.img}}{% else %}placeholder.svg{% endif %}{% endcapture %}
                                     {% capture video-poster %}{% if work.video-poster %}{{base}}/{{work.video-poster}}{% else %}{{img}}{% endif %}{% endcapture %}
                                     <img src="{{img}}">
                                     {% if work.webm or work.mp4 %}
-                                        <video loop muted playsinline preload="auto" width="100%" style="background-image: url('{{video-poster}}')" poster="{{base}}/video-poster.svg">
+                                        <video loop muted playsinline preload="auto" width="100%" poster="{{video-poster}}">
                                             {% if work.webm %}
                                                 <source src="{{base}}/{{work.webm}}" type="video/webm">
                                             {% endif %}
@@ -29,28 +33,24 @@
                                             <img src="{{base}}/video-not-supported.svg">
                                         </video>
                                     {% endif %}
-                                </div>
-
-                                <h2 class="title">
-                                    {{work.title}}
-                                </h2>
                                 
-                                {% if work.website or work.youtube or work.play-store or work.app-store %}
-                                    <div class="resources">
-                                        {% if work.play-store %}
-                                            <a href="https://play.google.com/store/apps/details?id={{work.play-store}}"><i class="fab fa-google-play"></i></a>
-                                        {% endif %}
-                                        {% if work.app-store %}
-                                            <a href="https://itunes.apple.com/app/id{{work.app-store}}"><i class="fab fa-app-store"></i></a>
-                                        {% endif %}
-                                        {% if work.youtube %}
-                                            <a href="https://www.youtube.com/watch?v={{work.youtube}}"><i class="fab fa-youtube"></i></a>
-                                        {% endif %}
-                                        {% if work.website %}
-                                            <a href="{{work.website}}"><i class="fas fa-globe"></i></a>
-                                        {% endif %}
-                                    </div>
-                                {% endif %}
+                                    {% if work.website or work.youtube or work.play-store or work.app-store %}
+                                        <div class="resources">
+                                            {% if work.play-store %}
+                                                <a href="https://play.google.com/store/apps/details?id={{work.play-store}}"><i class="fab fa-google-play"></i></a>
+                                            {% endif %}
+                                            {% if work.app-store %}
+                                                <a href="https://itunes.apple.com/app/id{{work.app-store}}"><i class="fab fa-app-store"></i></a>
+                                            {% endif %}
+                                            {% if work.youtube %}
+                                                <a href="https://www.youtube.com/watch?v={{work.youtube}}"><i class="fab fa-youtube"></i></a>
+                                            {% endif %}
+                                            {% if work.website %}
+                                                <a href="{{work.website}}"><i class="fas fa-globe"></i></a>
+                                            {% endif %}
+                                        </div>
+                                    {% endif %}
+                                </div>
                                 
                                 {{work.content}}
                             </div>
