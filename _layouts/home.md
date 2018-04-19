@@ -19,7 +19,7 @@
                                     {% capture video-poster %}{% if work.video-poster %}{{base}}/{{work.video-poster}}{% else %}{{img}}{% endif %}{% endcapture %}
                                     <img src="{{img}}">
                                     {% if work.webm or work.mp4 %}
-                                        <video loop muted controls preload="auto" width="100%" style="background-image: url('{{video-poster}}')" poster="{{base}}/video-poster.svg">
+                                        <video loop muted playsinline preload="auto" width="100%" style="background-image: url('{{video-poster}}')" poster="{{base}}/video-poster.svg">
                                             {% if work.webm %}
                                                 <source src="{{base}}/{{work.webm}}" type="video/webm">
                                             {% endif %}
