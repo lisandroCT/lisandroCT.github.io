@@ -332,16 +332,32 @@ video {
     font-size: 110%;
     margin: 0;
     padding: 0.3em;
-    padding-left: 1em;
-    padding-right: 1em;
     position: absolute;
     font-family: 'Dosis', sans-serif;
     font-weight: 700;
-    top: 0.1em;
-    left: 0.1em;
     background: #f0f0fa;
     color: #813136;
-    border-radius: 0.2em 0;
+}
+
+.frame .title {
+    padding-left: 1em;
+    padding-right: 1em;
+    top: 0.1em;
+    left: 0.1em;
+    border-radius: 0 0 0.2em 0;
+}
+
+.frame .resources {
+    font-family: 'Dosis', sans-serif;
+    background: #f0f0fa;
+    margin: 0;
+    padding: 0.3em;
+    position: absolute;
+    top: 0.1em;
+    right: 0.1em;
+    display: grid;
+    grid-row-gap: 0.2em;
+    border-radius: 0 0 0 0.2em;
 }
 
 .frame p {

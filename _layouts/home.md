@@ -22,10 +22,27 @@
                                     {% endif %}
                                 </div>
 
-                                <h2>
+                                <h2 class="title">
                                     {{work.title}}
                                 </h2>
-
+                                
+                                {% if work.website or work.youtube or work.play-store or work.app-store %}
+                                    <div class="resources">
+                                        {% if work.play-store %}
+                                            <a href="https://play.google.com/store/apps/details?id={{work.play-store}}"><i class="fab fa-google-play"></i></a>
+                                        {% endif %}
+                                        {% if work.app-store %}
+                                            <a href="https://itunes.apple.com/app/id{{work.app-store}}"><i class="fab fa-app-store"></i></a>
+                                        {% endif %}
+                                        {% if work.youtube %}
+                                            <a href="https://www.youtube.com/watch?v={{work.youtube}}"><i class="fab fa-youtube"></i></a>
+                                        {% endif %}
+                                        {% if work.website %}
+                                            <a href="{{work.website}}"><i class="fas fa-globe"></i></a>
+                                        {% endif %}
+                                    </div>
+                                {% endif %}
+                                
                                 {{work.content}}
                             </div>
                         </div>
@@ -54,7 +71,7 @@
                                     {% endif %}
                                 </div>
 
-                                <h2>
+                                <h2 class="title">
                                     {{project.title}}
                                 </h2>
 
