@@ -122,7 +122,7 @@
             
             var img = div.getElementsByTagName('img')[0];
             
-            video.load();
+            video.removeAttribute("controls");
             video.play();
             
             img.style.display = "none";
