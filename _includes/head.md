@@ -14,6 +14,8 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#ffffff">
     
+    <link rel="stylesheet" href="{{site.baseurl}}/css/styles.css">
+    
     {% if page.layout == "blog-post" %}
         <script src='https://www.google.com/recaptcha/api.js' async defer></script>
     {% endif %}
