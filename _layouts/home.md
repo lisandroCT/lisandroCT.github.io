@@ -7,7 +7,7 @@
         <div class="portfolio" id="portfolio">
             <h1 class="is-center">Portfolio</h1>
 
-            <div class="pure-g">
+            <div class="pure-g showcase">
                 {% unless site.categories.portfolio == null %}
                     {% assign sorted_portfolio = site.categories.portfolio | sort:"order" %}
                     {% for work in sorted_portfolio %}
@@ -63,7 +63,7 @@
         <div class="projects" id="projects">
             <h1 class="is-center">Projects</h1>
 
-            <div class="pure-g">
+            <div class="pure-g showcase">
                 {% unless site.categories.projects == null %}
                     {% assign sorted_projects = site.categories.projects | sort:"order" %}
                     {% for project in sorted_projects %}

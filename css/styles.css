@@ -309,6 +309,11 @@ video {
     background: #d2d4dd;
 }
 
+.showcase {
+    max-width: 1920px;
+    margin: auto;
+}
+
 /*
  * -- FRAME STYLES --
  */
