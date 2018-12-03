@@ -28,7 +28,7 @@
                                         <img src="{{base}}/video-not-supported.svg">
                                     </video>
                                 {% endif %}
-                                
+
                                 <h2 class="title">
                                     {{work.title}}
                                 </h2>
@@ -36,20 +36,20 @@
                                 {% if work.website or work.youtube or work.play-store or work.app-store %}
                                     <div class="resources">
                                         {% if work.play-store %}
-                                            <a href="https://play.google.com/store/apps/details?id={{work.play-store}}"><i class="fab fa-google-play"></i></a>
+                                            <a href="https://play.google.com/store/apps/details?id={{work.play-store}}" target="_blank"><i class="fab fa-google-play"></i></a>
                                         {% endif %}
                                         {% if work.app-store %}
-                                            <a href="https://itunes.apple.com/app/id{{work.app-store}}"><i class="fab fa-app-store"></i></a>
+                                            <a href="https://itunes.apple.com/app/id{{work.app-store}}" target="_blank"><i class="fab fa-app-store"></i></a>
                                         {% endif %}
                                         {% if work.youtube %}
-                                            <a href="https://www.youtube.com/watch?v={{work.youtube}}"><i class="fab fa-youtube"></i></a>
+                                            <a href="https://www.youtube.com/watch?v={{work.youtube}}" target="_blank"><i class="fab fa-youtube"></i></a>
                                         {% endif %}
                                         {% if work.website %}
-                                            <a href="{{work.website}}"><i class="fas fa-globe"></i></a>
+                                            <a href="{{work.website}}" target="_blank"><i class="fas fa-globe"></i></a>
                                         {% endif %}
                                     </div>
                                 {% endif %}
-                                
+
                                 {{work.content}}
                             </div>
                         </div>
@@ -58,7 +58,7 @@
             </div>
         </div>
     </section>
-    
+
     <section>
         <div class="projects" id="projects">
             <h1 class="is-center">Projects</h1>
