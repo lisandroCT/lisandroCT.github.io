@@ -190,7 +190,7 @@ video {
     top: 0;
     left: 0;
     position: fixed !important;
-    
+
     color: #cccccc;
 }
 
@@ -369,6 +369,17 @@ video {
     border-radius: 0 0 0 0.2em;
 }
 
+.frame .play-icon {
+    position: absolute;
+    right: 0.25em;
+    font-size: 300%;
+    color: #813136;
+    transform: translateY(-1.35em);
+    background-color: #f0f0fa;
+    padding: 0.06em;
+    border-radius: 50%
+}
+
 .frame p {
     margin: 0;
     font-weight: 300;
@@ -466,7 +477,7 @@ video {
 .cover {
     width: 100%;
     border-radius: 0.2em;
-    
+
     padding-left: 1em;
     font-size: 130%;
 }
@@ -476,7 +487,7 @@ video {
     height: 100%;
     background: rgba(108, 117, 147, 0.2);
     border-radius: 0.2em;
-    
+
     padding: 0.4em;
     font-size: 90%;
 }
@@ -799,19 +810,19 @@ video {
         display: inline;
         visibility: visible;
     }
-    
+
     .splash-content .div {
         width: 70%;
     }
-        
+
     .social {
         font-size: 180%;
     }
-    
+
     .content-wrapper h1 {
         width: 70%;
     }
-    
+
     .not-found {
         font-size: 2000%;
     }
@@ -839,34 +850,34 @@ video {
     .l-box-lrg {
         border: none;
     }
-    
+
     .header .logo {
         width: 100%;
     }
-    
+
     .header .bars {
         display: none;
         visibility: hidden;
     }
-    
-    .side-navigation {        
+
+    .side-navigation {
         display: none;
         visibility: hidden;
     }
-    
+
     .header .navigation {
         display: inline;
         visibility: visible;
     }
-    
+
     .splash-content .div {
         width: 50%;
     }
-    
+
     .content-wrapper h1 {
         width: 50%;
     }
-    
+
     .not-found {
         font-size: 2500%;
     }
@@ -876,7 +887,7 @@ video {
     .splash-content .div {
         width: 30%;
     }
-    
+
     .content-wrapper h1 {
         width: 30%;
     }

@@ -1,16 +1,16 @@
 <noscript id="deferred-styles">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-    
+
     <!--[if lte IE 8]>
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
     <![endif]-->
     <!--[if gt IE 8]><!-->
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
     <!--<![endif]-->
-        
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,700|Roboto:300,700|Patrick+Hand" rel="stylesheet">
- 
+
     <link rel="stylesheet" href="{{site.baseurl}}/css/styles-min.css">
     <link rel="stylesheet" href="{{site.baseurl}}/css/highlights-min.css">
 </noscript>
@@ -24,7 +24,7 @@
     };
     var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
     if (raf) {
-        raf(function() { 
+        raf(function() {
             window.setTimeout(loadDeferredStyles, 0);
         });
     } else {
@@ -152,26 +152,32 @@
             if(video == null) {
                 return;
             }
-            
+
             var img = div.getElementsByTagName('img')[0];
-            
+
+            var play = div.getElementsByTagName('i')[0];
+
             video.play();
-            
+
             img.style.display = "none";
             video.style.display = "inline";
+            play.style.display = "none";
         }
         function showImg(div) {
             var video = div.getElementsByTagName('video')[0];
             if(video == null) {
                 return;
             }
-            
+
             var img = div.getElementsByTagName('img')[0];
-            
+
+            var play = div.getElementsByTagName('i')[0];
+
             video.pause();
-            
+
             img.style.display = "inline";
             video.style.display = "none";
+            play.style.display = "inherit";
         }
     </script>
 {% endif %}
@@ -236,42 +242,42 @@
     <script type="text/javascript">
         function reply(parentId) {
             cancelReply();
-            
+
             var parent = document.getElementById("comment-form-parent");
             parent.value = parentId;
-            
+
             var label = document.getElementById("replying-label");
             label.classList.remove("hidden");
         }
-        
+
         function reply(parentId, quotedId) {
             cancelReply();
-            
+
             var parent = document.getElementById("comment-form-parent");
             parent.value = parentId;
             var quote = document.getElementById("comment-form-quote");
             quote.value = quotedId;
-            
+
             var label = document.getElementById("replying-label");
             label.classList.remove("hidden");
         }
-    
+
         function cancelReply() {
             var parent = document.getElementById("comment-form-parent");
             parent.value = "";
             var quote = document.getElementById("comment-form-quote");
             quote.value = "";
-            
+
             var label = document.getElementById("replying-label");
             label.classList.add("hidden");
         }
-        
+
         (function() {
             var form = document.getElementById("comment-form");
             var button = document.getElementById("comment-form-submit");
             var buttonContent = button.innerHTML;
             var log = document.getElementById("comment-log");
-            
+
             var timeout = null;
 
             form.onsubmit = function(event) {
@@ -309,38 +315,38 @@
 
             function onSuccess() {
                 cancelReply();
-            
+
                 grecaptcha.reset();
                 form.reset();
-                
+
                 log.classList.remove("hidden");
                 log.classList.remove("error");
                 log.classList.add("success");
-                
+
                 clearTimeout(timeout);
                 timeout = setTimeout(function() { log.classList.add("hidden"); }, 7000);
-                
+
                 log.innerHTML = "<i class='fa fa-check-circle' aria-hidden='true'></i> <strong>Thanks for your comment!</strong> It will show on the site in a few seconds."
             }
 
             function onError() {
                 grecaptcha.reset();
-                            
+
                 log.classList.remove("hidden");
                 log.classList.remove("success");
                 log.classList.add("error");
-                
+
                 clearTimeout(timeout);
                 timeout = setTimeout(function() { log.classList.add("hidden"); }, 7000);
-                
+
                 log.innerHTML = "<i class='fa fa-exclamation-circle' aria-hidden='true'></i> <strong>Sorry, there was an error with your submission.</strong> Please make sure all required fields have been completed and try again."
             }
-            
+
             function enableButton() {
                 button.innerHTML = buttonContent;
                 button.disabled = false;
             }
-            
+
             function disableButton() {
                 button.innerHTML = "<div class='loader'></div>";
                 button.disabled = true;
@@ -351,13 +357,13 @@
 <script type="text/javascript">
     var navbar = document.getElementById("navbar");
     var shadow = document.getElementById("shadow");
- 
+
     function openNav() {
         navbar.style.left = "0";
         shadow.style.display = "inline";
         shadow.style.visibility = "visible";
     }
- 
+
     function closeNav() {
         navbar.style.left = "-10em";
         shadow.style.display = "none";

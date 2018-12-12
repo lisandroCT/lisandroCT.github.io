@@ -16,6 +16,7 @@
                                 {% capture base %}{{site.baseurl}}/assets/portfolio{% endcapture %}
                                 {% capture img %}{{base}}/{% if work.img %}{{work.img}}{% else %}placeholder.svg{% endif %}{% endcapture %}
                                 {% capture video-poster %}{% if work.video-poster %}{{base}}/{{work.video-poster}}{% else %}{{img}}{% endif %}{% endcapture %}
+
                                 <img src="{{img}}">
                                 {% if work.webm or work.mp4 %}
                                     <video loop muted playsinline preload="auto" width="100%" poster="{{video-poster}}">
@@ -27,6 +28,7 @@
                                         {% endif %}
                                         <img src="{{base}}/video-not-supported.svg">
                                     </video>
+                                    <i class="play-icon far fa-play-circle"></i>
                                 {% endif %}
 
                                 <h2 class="title">
