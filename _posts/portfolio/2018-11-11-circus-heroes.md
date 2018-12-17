@@ -7,4 +7,4 @@ video-poster: circus-heroes-blur.jpg
 youtube: 5jXgi2VDlgQ
 order: 2
 ---
-Multiplatform mobile tower defense game with cards. The game has tens of levels that took place in multiple worlds, cinematics, in-app purchases, ads, interactive objects and power ups.
+Multiplatform mobile tower defense game with cards. The game has tons of levels that take place in multiple worlds. It includes cinematics, in-app purchases, ads, interactive objects and power ups.
