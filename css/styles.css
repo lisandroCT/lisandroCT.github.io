@@ -377,7 +377,8 @@ video {
     transform: translateY(-1.35em);
     background-color: #f0f0fa;
     padding: 0.06em;
-    border-radius: 50%
+    border-radius: 50%;
+    display: inherit
 }
 
 .frame p {
